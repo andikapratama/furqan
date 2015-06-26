@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sources_showhide"
+        android:checkable="true"
+        android:title="@string/sources_showhide" />
+    <item
+        android:id="@+id/sources_delete"
+        android:title="@string/sources_delete" />
+</menu>

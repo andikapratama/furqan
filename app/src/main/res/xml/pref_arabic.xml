@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_header_text" />
+    <ListPreference
+        android:defaultValue="Scheherazade"
+        android:entries="@array/pref_arabic_typeface_names"
+        android:entryValues="@array/pref_arabic_typeface_files"
+        android:key="arabic_typeface"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_arabic_typeface" />
+
+    <EditTextPreference
+        android:defaultValue="32"
+        android:inputType="number"
+        android:key="arabic_size"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_arabic_size" />
+
+    <EditTextPreference
+        android:defaultValue="16"
+        android:inputType="number"
+        android:key="text_size"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_sources_size" />
+
+    <Preference
+        android:defaultValue=""
+        android:key="recitationName"
+        android:positiveButtonText="Ok"
+        android:title="Reciter" />
+
+    <PreferenceCategory android:title="Backup" />
+    <Preference
+        android:defaultValue=""
+        android:key="exportNotes"
+        android:positiveButtonText="Ok"
+        android:title="Backup Notes" />
+
+
+    <Preference
+        android:defaultValue=""
+        android:key="importNotes"
+        android:positiveButtonText="Ok"
+        android:title="Import Notes From File" />
+
+
+</PreferenceScreen>

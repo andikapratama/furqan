@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_header_translations" />
+
+    <EditTextPreference
+        android:inputType="number"
+        android:key="translations_text_size"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_translations_text_size" />
+
+</PreferenceScreen>

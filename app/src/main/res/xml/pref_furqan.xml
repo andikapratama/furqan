@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_header_text" />
+    <ListPreference
+        android:defaultValue="Scheherazade"
+        android:entries="@array/pref_arabic_typeface_names"
+        android:entryValues="@array/pref_arabic_typeface_files"
+        android:key="arabic_typeface"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_arabic_typeface" />
+
+    <EditTextPreference
+        android:inputType="number"
+        android:key="arabic_size"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_arabic_size" />
+    <PreferenceCategory android:title="@string/pref_header_other" />
+</PreferenceScreen>

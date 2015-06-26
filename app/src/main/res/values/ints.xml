@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="pref_arabic_size_value">
+        <item>
+            13
+        </item>
+        <item>
+            16
+        </item>
+        <item>
+            20
+        </item>
+        <item>
+            23
+        </item>
+        <item>
+            26
+        </item>
+    </integer-array>
+</resources>

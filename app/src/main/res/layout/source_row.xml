@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/drag_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:id="@+id/drag_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/drag" />
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="67dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:padding="17dp"
+        android:src="@drawable/content_discard" />
+
+    <CheckBox
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/imageButton" />
+
+
+    <TextView
+        android:id="@+id/languageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_toLeftOf="@id/toggleButton"
+        android:layout_toRightOf="@id/drag_frame"
+        android:gravity="center_vertical|left"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:text="@string/language"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/sourceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_toLeftOf="@id/toggleButton"
+        android:layout_toRightOf="@id/drag_frame"
+        android:ellipsize="end"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/source"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+</RelativeLayout>

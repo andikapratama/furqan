@@ -1,0 +1,1697 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<quran copyright="(C) 2008-2009 Tanzil.info" license="cc-by" type="metadata" version="1.0">
+    <suras alias="chapters">
+        <sura name="الفاتحة" ayas="7" ename="The Opening" index="1" order="5" rukus="1" start="0"
+            tname="Al-Faatiha" type="Meccan" />
+        <sura name="البقرة" ayas="286" ename="The Cow" index="2" order="87" rukus="40" start="7"
+            tname="Al-Baqara" type="Medinan" />
+        <sura name="آل عمران" ayas="200" ename="The Family of Imraan" index="3" order="89"
+            rukus="20" start="293" tname="Aal-i-Imraan" type="Medinan" />
+        <sura name="النساء" ayas="176" ename="The Women" index="4" order="92" rukus="24" start="493"
+            tname="An-Nisaa" type="Medinan" />
+        <sura name="المائدة" ayas="120" ename="The Table" index="5" order="112" rukus="16"
+            start="669" tname="Al-Maaida" type="Medinan" />
+        <sura name="الأنعام" ayas="165" ename="The Cattle" index="6" order="55" rukus="20"
+            start="789" tname="Al-An'aam" type="Meccan" />
+        <sura name="الأعراف" ayas="206" ename="The Heights" index="7" order="39" rukus="24"
+            start="954" tname="Al-A'raaf" type="Meccan" />
+        <sura name="الأنفال" ayas="75" ename="The Spoils of War" index="8" order="88" rukus="10"
+            start="1160" tname="Al-Anfaal" type="Medinan" />
+        <sura name="التوبة" ayas="129" ename="The Repentance" index="9" order="113" rukus="16"
+            start="1235" tname="At-Tawba" type="Medinan" />
+        <sura name="يونس" ayas="109" ename="Jonas" index="10" order="51" rukus="11" start="1364"
+            tname="Yunus" type="Meccan" />
+        <sura name="هود" ayas="123" ename="Hud" index="11" order="52" rukus="10" start="1473"
+            tname="Hud" type="Meccan" />
+        <sura name="يوسف" ayas="111" ename="Joseph" index="12" order="53" rukus="12" start="1596"
+            tname="Yusuf" type="Meccan" />
+        <sura name="الرعد" ayas="43" ename="The Thunder" index="13" order="96" rukus="6"
+            start="1707" tname="Ar-Ra'd" type="Medinan" />
+        <sura name="ابراهيم" ayas="52" ename="Abraham" index="14" order="72" rukus="7" start="1750"
+            tname="Ibrahim" type="Meccan" />
+        <sura name="الحجر" ayas="99" ename="The Rock" index="15" order="54" rukus="6" start="1802"
+            tname="Al-Hijr" type="Meccan" />
+        <sura name="النحل" ayas="128" ename="The Bee" index="16" order="70" rukus="16" start="1901"
+            tname="An-Nahl" type="Meccan" />
+        <sura name="الإسراء" ayas="111" ename="The Night Journey" index="17" order="50" rukus="12"
+            start="2029" tname="Al-Israa" type="Meccan" />
+        <sura name="الكهف" ayas="110" ename="The Cave" index="18" order="69" rukus="12" start="2140"
+            tname="Al-Kahf" type="Meccan" />
+        <sura name="مريم" ayas="98" ename="Mary" index="19" order="44" rukus="6" start="2250"
+            tname="Maryam" type="Meccan" />
+        <sura name="طه" ayas="135" ename="Taa-Haa" index="20" order="45" rukus="8" start="2348"
+            tname="Taa-Haa" type="Meccan" />
+        <sura name="الأنبياء" ayas="112" ename="The Prophets" index="21" order="73" rukus="7"
+            start="2483" tname="Al-Anbiyaa" type="Meccan" />
+        <sura name="الحج" ayas="78" ename="The Pilgrimage" index="22" order="103" rukus="10"
+            start="2595" tname="Al-Hajj" type="Medinan" />
+        <sura name="المؤمنون" ayas="118" ename="The Believers" index="23" order="74" rukus="6"
+            start="2673" tname="Al-Muminoon" type="Meccan" />
+        <sura name="النور" ayas="64" ename="The Light" index="24" order="102" rukus="9" start="2791"
+            tname="An-Noor" type="Medinan" />
+        <sura name="الفرقان" ayas="77" ename="The Criterion" index="25" order="42" rukus="6"
+            start="2855" tname="Al-Furqaan" type="Meccan" />
+        <sura name="الشعراء" ayas="227" ename="The Poets" index="26" order="47" rukus="11"
+            start="2932" tname="Ash-Shu'araa" type="Meccan" />
+        <sura name="النمل" ayas="93" ename="The Ant" index="27" order="48" rukus="7" start="3159"
+            tname="An-Naml" type="Meccan" />
+        <sura name="القصص" ayas="88" ename="The Stories" index="28" order="49" rukus="8"
+            start="3252" tname="Al-Qasas" type="Meccan" />
+        <sura name="العنكبوت" ayas="69" ename="The Spider" index="29" order="85" rukus="7"
+            start="3340" tname="Al-Ankaboot" type="Meccan" />
+        <sura name="الروم" ayas="60" ename="The Romans" index="30" order="84" rukus="6" start="3409"
+            tname="Ar-Room" type="Meccan" />
+        <sura name="لقمان" ayas="34" ename="Luqman" index="31" order="57" rukus="3" start="3469"
+            tname="Luqman" type="Meccan" />
+        <sura name="السجدة" ayas="30" ename="The Prostration" index="32" order="75" rukus="3"
+            start="3503" tname="As-Sajda" type="Meccan" />
+        <sura name="الأحزاب" ayas="73" ename="The Clans" index="33" order="90" rukus="9"
+            start="3533" tname="Al-Ahzaab" type="Medinan" />
+        <sura name="سبإ" ayas="54" ename="Sheba" index="34" order="58" rukus="6" start="3606"
+            tname="Saba" type="Meccan" />
+        <sura name="فاطر" ayas="45" ename="The Originator" index="35" order="43" rukus="5"
+            start="3660" tname="Faatir" type="Meccan" />
+        <sura name="يس" ayas="83" ename="Yaseen" index="36" order="41" rukus="5" start="3705"
+            tname="Yaseen" type="Meccan" />
+        <sura name="الصافات" ayas="182" ename="Those drawn up in Ranks" index="37" order="56"
+            rukus="5" start="3788" tname="As-Saaffaat" type="Meccan" />
+        <sura name="ص" ayas="88" ename="The letter Saad" index="38" order="38" rukus="5"
+            start="3970" tname="Saad" type="Meccan" />
+        <sura name="الزمر" ayas="75" ename="The Groups" index="39" order="59" rukus="8" start="4058"
+            tname="Az-Zumar" type="Meccan" />
+        <sura name="غافر" ayas="85" ename="The Forgiver" index="40" order="60" rukus="9"
+            start="4133" tname="Al-Ghaafir" type="Meccan" />
+        <sura name="فصلت" ayas="54" ename="Explained in detail" index="41" order="61" rukus="6"
+            start="4218" tname="Fussilat" type="Meccan" />
+        <sura name="الشورى" ayas="53" ename="Consultation" index="42" order="62" rukus="5"
+            start="4272" tname="Ash-Shura" type="Meccan" />
+        <sura name="الزخرف" ayas="89" ename="Ornaments of gold" index="43" order="63" rukus="7"
+            start="4325" tname="Az-Zukhruf" type="Meccan" />
+        <sura name="الدخان" ayas="59" ename="The Smoke" index="44" order="64" rukus="3" start="4414"
+            tname="Ad-Dukhaan" type="Meccan" />
+        <sura name="الجاثية" ayas="37" ename="Crouching" index="45" order="65" rukus="4"
+            start="4473" tname="Al-Jaathiya" type="Meccan" />
+        <sura name="الأحقاف" ayas="35" ename="The Dunes" index="46" order="66" rukus="4"
+            start="4510" tname="Al-Ahqaf" type="Meccan" />
+        <sura name="محمد" ayas="38" ename="Muhammad" index="47" order="95" rukus="4" start="4545"
+            tname="Muhammad" type="Medinan" />
+        <sura name="الفتح" ayas="29" ename="The Victory" index="48" order="111" rukus="4"
+            start="4583" tname="Al-Fath" type="Medinan" />
+        <sura name="الحجرات" ayas="18" ename="The Inner Apartments" index="49" order="106" rukus="2"
+            start="4612" tname="Al-Hujuraat" type="Medinan" />
+        <sura name="ق" ayas="45" ename="The letter Qaaf" index="50" order="34" rukus="3"
+            start="4630" tname="Qaaf" type="Meccan" />
+        <sura name="الذاريات" ayas="60" ename="The Winnowing Winds" index="51" order="67" rukus="3"
+            start="4675" tname="Adh-Dhaariyat" type="Meccan" />
+        <sura name="الطور" ayas="49" ename="The Mount" index="52" order="76" rukus="2" start="4735"
+            tname="At-Tur" type="Meccan" />
+        <sura name="النجم" ayas="62" ename="The Star" index="53" order="23" rukus="3" start="4784"
+            tname="An-Najm" type="Meccan" />
+        <sura name="القمر" ayas="55" ename="The Moon" index="54" order="37" rukus="3" start="4846"
+            tname="Al-Qamar" type="Meccan" />
+        <sura name="الرحمن" ayas="78" ename="The Beneficent" index="55" order="97" rukus="3"
+            start="4901" tname="Ar-Rahmaan" type="Medinan" />
+        <sura name="الواقعة" ayas="96" ename="The Inevitable" index="56" order="46" rukus="3"
+            start="4979" tname="Al-Waaqia" type="Meccan" />
+        <sura name="الحديد" ayas="29" ename="The Iron" index="57" order="94" rukus="4" start="5075"
+            tname="Al-Hadid" type="Medinan" />
+        <sura name="المجادلة" ayas="22" ename="The Pleading Woman" index="58" order="105" rukus="3"
+            start="5104" tname="Al-Mujaadila" type="Medinan" />
+        <sura name="الحشر" ayas="24" ename="The Exile" index="59" order="101" rukus="3" start="5126"
+            tname="Al-Hashr" type="Medinan" />
+        <sura name="الممتحنة" ayas="13" ename="She that is to be examined" index="60" order="91"
+            rukus="2" start="5150" tname="Al-Mumtahana" type="Medinan" />
+        <sura name="الصف" ayas="14" ename="The Ranks" index="61" order="109" rukus="2" start="5163"
+            tname="As-Saff" type="Medinan" />
+        <sura name="الجمعة" ayas="11" ename="Friday" index="62" order="110" rukus="2" start="5177"
+            tname="Al-Jumu'a" type="Medinan" />
+        <sura name="المنافقون" ayas="11" ename="The Hypocrites" index="63" order="104" rukus="2"
+            start="5188" tname="Al-Munaafiqoon" type="Medinan" />
+        <sura name="التغابن" ayas="18" ename="Mutual Disillusion" index="64" order="108" rukus="2"
+            start="5199" tname="At-Taghaabun" type="Medinan" />
+        <sura name="الطلاق" ayas="12" ename="Divorce" index="65" order="99" rukus="2" start="5217"
+            tname="At-Talaaq" type="Medinan" />
+        <sura name="التحريم" ayas="12" ename="The Prohibition" index="66" order="107" rukus="2"
+            start="5229" tname="At-Tahrim" type="Medinan" />
+        <sura name="الملك" ayas="30" ename="The Sovereignty" index="67" order="77" rukus="2"
+            start="5241" tname="Al-Mulk" type="Meccan" />
+        <sura name="القلم" ayas="52" ename="The Pen" index="68" order="2" rukus="2" start="5271"
+            tname="Al-Qalam" type="Meccan" />
+        <sura name="الحاقة" ayas="52" ename="The Reality" index="69" order="78" rukus="2"
+            start="5323" tname="Al-Haaqqa" type="Meccan" />
+        <sura name="المعارج" ayas="44" ename="The Ascending Stairways" index="70" order="79"
+            rukus="2" start="5375" tname="Al-Ma'aarij" type="Meccan" />
+        <sura name="نوح" ayas="28" ename="Noah" index="71" order="71" rukus="2" start="5419"
+            tname="Nooh" type="Meccan" />
+        <sura name="الجن" ayas="28" ename="The Jinn" index="72" order="40" rukus="2" start="5447"
+            tname="Al-Jinn" type="Meccan" />
+        <sura name="المزمل" ayas="20" ename="The Enshrouded One" index="73" order="3" rukus="2"
+            start="5475" tname="Al-Muzzammil" type="Meccan" />
+        <sura name="المدثر" ayas="56" ename="The Cloaked One" index="74" order="4" rukus="2"
+            start="5495" tname="Al-Muddaththir" type="Meccan" />
+        <sura name="القيامة" ayas="40" ename="The Resurrection" index="75" order="31" rukus="2"
+            start="5551" tname="Al-Qiyaama" type="Meccan" />
+        <sura name="الانسان" ayas="31" ename="Man" index="76" order="98" rukus="2" start="5591"
+            tname="Al-Insaan" type="Medinan" />
+        <sura name="المرسلات" ayas="50" ename="The Emissaries" index="77" order="33" rukus="2"
+            start="5622" tname="Al-Mursalaat" type="Meccan" />
+        <sura name="النبإ" ayas="40" ename="The Announcement" index="78" order="80" rukus="2"
+            start="5672" tname="An-Naba" type="Meccan" />
+        <sura name="النازعات" ayas="46" ename="Those who drag forth" index="79" order="81" rukus="2"
+            start="5712" tname="An-Naazi'aat" type="Meccan" />
+        <sura name="عبس" ayas="42" ename="He frowned" index="80" order="24" rukus="1" start="5758"
+            tname="Abasa" type="Meccan" />
+        <sura name="التكوير" ayas="29" ename="The Overthrowing" index="81" order="7" rukus="1"
+            start="5800" tname="At-Takwir" type="Meccan" />
+        <sura name="الإنفطار" ayas="19" ename="The Cleaving" index="82" order="82" rukus="1"
+            start="5829" tname="Al-Infitaar" type="Meccan" />
+        <sura name="المطففين" ayas="36" ename="Defrauding" index="83" order="86" rukus="1"
+            start="5848" tname="Al-Mutaffifin" type="Meccan" />
+        <sura name="الإنشقاق" ayas="25" ename="The Splitting Open" index="84" order="83" rukus="1"
+            start="5884" tname="Al-Inshiqaaq" type="Meccan" />
+        <sura name="البروج" ayas="22" ename="The Constellations" index="85" order="27" rukus="1"
+            start="5909" tname="Al-Burooj" type="Meccan" />
+        <sura name="الطارق" ayas="17" ename="The Morning Star" index="86" order="36" rukus="1"
+            start="5931" tname="At-Taariq" type="Meccan" />
+        <sura name="الأعلى" ayas="19" ename="The Most High" index="87" order="8" rukus="1"
+            start="5948" tname="Al-A'laa" type="Meccan" />
+        <sura name="الغاشية" ayas="26" ename="The Overwhelming" index="88" order="68" rukus="1"
+            start="5967" tname="Al-Ghaashiya" type="Meccan" />
+        <sura name="الفجر" ayas="30" ename="The Dawn" index="89" order="10" rukus="1" start="5993"
+            tname="Al-Fajr" type="Meccan" />
+        <sura name="البلد" ayas="20" ename="The City" index="90" order="35" rukus="1" start="6023"
+            tname="Al-Balad" type="Meccan" />
+        <sura name="الشمس" ayas="15" ename="The Sun" index="91" order="26" rukus="1" start="6043"
+            tname="Ash-Shams" type="Meccan" />
+        <sura name="الليل" ayas="21" ename="The Night" index="92" order="9" rukus="1" start="6058"
+            tname="Al-Lail" type="Meccan" />
+        <sura name="الضحى" ayas="11" ename="The Morning Hours" index="93" order="11" rukus="1"
+            start="6079" tname="Ad-Dhuhaa" type="Meccan" />
+        <sura name="الشرح" ayas="8" ename="The Consolation" index="94" order="12" rukus="1"
+            start="6090" tname="Ash-Sharh" type="Meccan" />
+        <sura name="التين" ayas="8" ename="The Fig" index="95" order="28" rukus="1" start="6098"
+            tname="At-Tin" type="Meccan" />
+        <sura name="العلق" ayas="19" ename="The Clot" index="96" order="1" rukus="1" start="6106"
+            tname="Al-Alaq" type="Meccan" />
+        <sura name="القدر" ayas="5" ename="The Power, Fate" index="97" order="25" rukus="1"
+            start="6125" tname="Al-Qadr" type="Meccan" />
+        <sura name="البينة" ayas="8" ename="The Evidence" index="98" order="100" rukus="1"
+            start="6130" tname="Al-Bayyina" type="Medinan" />
+        <sura name="الزلزلة" ayas="8" ename="The Earthquake" index="99" order="93" rukus="1"
+            start="6138" tname="Az-Zalzala" type="Medinan" />
+        <sura name="العاديات" ayas="11" ename="The Chargers" index="100" order="14" rukus="1"
+            start="6146" tname="Al-Aadiyaat" type="Meccan" />
+        <sura name="القارعة" ayas="11" ename="The Calamity" index="101" order="30" rukus="1"
+            start="6157" tname="Al-Qaari'a" type="Meccan" />
+        <sura name="التكاثر" ayas="8" ename="Competition" index="102" order="16" rukus="1"
+            start="6168" tname="At-Takaathur" type="Meccan" />
+        <sura name="العصر" ayas="3" ename="The Declining Day, Epoch" index="103" order="13"
+            rukus="1" start="6176" tname="Al-Asr" type="Meccan" />
+        <sura name="الهمزة" ayas="9" ename="The Traducer" index="104" order="32" rukus="1"
+            start="6179" tname="Al-Humaza" type="Meccan" />
+        <sura name="الفيل" ayas="5" ename="The Elephant" index="105" order="19" rukus="1"
+            start="6188" tname="Al-Fil" type="Meccan" />
+        <sura name="قريش" ayas="4" ename="Quraysh" index="106" order="29" rukus="1" start="6193"
+            tname="Quraish" type="Meccan" />
+        <sura name="الماعون" ayas="7" ename="Almsgiving" index="107" order="17" rukus="1"
+            start="6197" tname="Al-Maa'un" type="Meccan" />
+        <sura name="الكوثر" ayas="3" ename="Abundance" index="108" order="15" rukus="1" start="6204"
+            tname="Al-Kawthar" type="Meccan" />
+        <sura name="الكافرون" ayas="6" ename="The Disbelievers" index="109" order="18" rukus="1"
+            start="6207" tname="Al-Kaafiroon" type="Meccan" />
+        <sura name="النصر" ayas="3" ename="Divine Support" index="110" order="114" rukus="1"
+            start="6213" tname="An-Nasr" type="Medinan" />
+        <sura name="المسد" ayas="5" ename="The Palm Fibre" index="111" order="6" rukus="1"
+            start="6216" tname="Al-Masad" type="Meccan" />
+        <sura name="الإخلاص" ayas="4" ename="Sincerity" index="112" order="22" rukus="1"
+            start="6221" tname="Al-Ikhlaas" type="Meccan" />
+        <sura name="الفلق" ayas="5" ename="The Dawn" index="113" order="20" rukus="1" start="6225"
+            tname="Al-Falaq" type="Meccan" />
+        <sura name="الناس" ayas="6" ename="Mankind" index="114" order="21" rukus="1" start="6230"
+            tname="An-Naas" type="Meccan" />
+    </suras>
+    <juzs alias="parts">
+        <juz aya="1" index="1" sura="1" />
+        <juz aya="142" index="2" sura="2" />
+        <juz aya="253" index="3" sura="2" />
+        <juz aya="93" index="4" sura="3" />
+        <juz aya="24" index="5" sura="4" />
+        <juz aya="148" index="6" sura="4" />
+        <juz aya="82" index="7" sura="5" />
+        <juz aya="111" index="8" sura="6" />
+        <juz aya="88" index="9" sura="7" />
+        <juz aya="41" index="10" sura="8" />
+        <juz aya="93" index="11" sura="9" />
+        <juz aya="6" index="12" sura="11" />
+        <juz aya="53" index="13" sura="12" />
+        <juz aya="1" index="14" sura="15" />
+        <juz aya="1" index="15" sura="17" />
+        <juz aya="75" index="16" sura="18" />
+        <juz aya="1" index="17" sura="21" />
+        <juz aya="1" index="18" sura="23" />
+        <juz aya="21" index="19" sura="25" />
+        <juz aya="56" index="20" sura="27" />
+        <juz aya="46" index="21" sura="29" />
+        <juz aya="31" index="22" sura="33" />
+        <juz aya="28" index="23" sura="36" />
+        <juz aya="32" index="24" sura="39" />
+        <juz aya="47" index="25" sura="41" />
+        <juz aya="1" index="26" sura="46" />
+        <juz aya="31" index="27" sura="51" />
+        <juz aya="1" index="28" sura="58" />
+        <juz aya="1" index="29" sura="67" />
+        <juz aya="1" index="30" sura="78" />
+    </juzs>
+    <hizbs alias="groups">
+        <quarter aya="1" index="1" sura="1" />
+        <quarter aya="26" index="2" sura="2" />
+        <quarter aya="44" index="3" sura="2" />
+        <quarter aya="60" index="4" sura="2" />
+        <quarter aya="75" index="5" sura="2" />
+        <quarter aya="92" index="6" sura="2" />
+        <quarter aya="106" index="7" sura="2" />
+        <quarter aya="124" index="8" sura="2" />
+        <quarter aya="142" index="9" sura="2" />
+        <quarter aya="158" index="10" sura="2" />
+        <quarter aya="177" index="11" sura="2" />
+        <quarter aya="189" index="12" sura="2" />
+        <quarter aya="203" index="13" sura="2" />
+        <quarter aya="219" index="14" sura="2" />
+        <quarter aya="233" index="15" sura="2" />
+        <quarter aya="243" index="16" sura="2" />
+        <quarter aya="253" index="17" sura="2" />
+        <quarter aya="263" index="18" sura="2" />
+        <quarter aya="272" index="19" sura="2" />
+        <quarter aya="283" index="20" sura="2" />
+        <quarter aya="15" index="21" sura="3" />
+        <quarter aya="33" index="22" sura="3" />
+        <quarter aya="52" index="23" sura="3" />
+        <quarter aya="75" index="24" sura="3" />
+        <quarter aya="93" index="25" sura="3" />
+        <quarter aya="113" index="26" sura="3" />
+        <quarter aya="133" index="27" sura="3" />
+        <quarter aya="153" index="28" sura="3" />
+        <quarter aya="171" index="29" sura="3" />
+        <quarter aya="186" index="30" sura="3" />
+        <quarter aya="1" index="31" sura="4" />
+        <quarter aya="12" index="32" sura="4" />
+        <quarter aya="24" index="33" sura="4" />
+        <quarter aya="36" index="34" sura="4" />
+        <quarter aya="58" index="35" sura="4" />
+        <quarter aya="74" index="36" sura="4" />
+        <quarter aya="88" index="37" sura="4" />
+        <quarter aya="100" index="38" sura="4" />
+        <quarter aya="114" index="39" sura="4" />
+        <quarter aya="135" index="40" sura="4" />
+        <quarter aya="148" index="41" sura="4" />
+        <quarter aya="163" index="42" sura="4" />
+        <quarter aya="1" index="43" sura="5" />
+        <quarter aya="12" index="44" sura="5" />
+        <quarter aya="27" index="45" sura="5" />
+        <quarter aya="41" index="46" sura="5" />
+        <quarter aya="51" index="47" sura="5" />
+        <quarter aya="67" index="48" sura="5" />
+        <quarter aya="82" index="49" sura="5" />
+        <quarter aya="97" index="50" sura="5" />
+        <quarter aya="109" index="51" sura="5" />
+        <quarter aya="13" index="52" sura="6" />
+        <quarter aya="36" index="53" sura="6" />
+        <quarter aya="59" index="54" sura="6" />
+        <quarter aya="74" index="55" sura="6" />
+        <quarter aya="95" index="56" sura="6" />
+        <quarter aya="111" index="57" sura="6" />
+        <quarter aya="127" index="58" sura="6" />
+        <quarter aya="141" index="59" sura="6" />
+        <quarter aya="151" index="60" sura="6" />
+        <quarter aya="1" index="61" sura="7" />
+        <quarter aya="31" index="62" sura="7" />
+        <quarter aya="47" index="63" sura="7" />
+        <quarter aya="65" index="64" sura="7" />
+        <quarter aya="88" index="65" sura="7" />
+        <quarter aya="117" index="66" sura="7" />
+        <quarter aya="142" index="67" sura="7" />
+        <quarter aya="156" index="68" sura="7" />
+        <quarter aya="171" index="69" sura="7" />
+        <quarter aya="189" index="70" sura="7" />
+        <quarter aya="1" index="71" sura="8" />
+        <quarter aya="22" index="72" sura="8" />
+        <quarter aya="41" index="73" sura="8" />
+        <quarter aya="61" index="74" sura="8" />
+        <quarter aya="1" index="75" sura="9" />
+        <quarter aya="19" index="76" sura="9" />
+        <quarter aya="34" index="77" sura="9" />
+        <quarter aya="46" index="78" sura="9" />
+        <quarter aya="60" index="79" sura="9" />
+        <quarter aya="75" index="80" sura="9" />
+        <quarter aya="93" index="81" sura="9" />
+        <quarter aya="111" index="82" sura="9" />
+        <quarter aya="122" index="83" sura="9" />
+        <quarter aya="11" index="84" sura="10" />
+        <quarter aya="26" index="85" sura="10" />
+        <quarter aya="53" index="86" sura="10" />
+        <quarter aya="71" index="87" sura="10" />
+        <quarter aya="90" index="88" sura="10" />
+        <quarter aya="6" index="89" sura="11" />
+        <quarter aya="24" index="90" sura="11" />
+        <quarter aya="41" index="91" sura="11" />
+        <quarter aya="61" index="92" sura="11" />
+        <quarter aya="84" index="93" sura="11" />
+        <quarter aya="108" index="94" sura="11" />
+        <quarter aya="7" index="95" sura="12" />
+        <quarter aya="30" index="96" sura="12" />
+        <quarter aya="53" index="97" sura="12" />
+        <quarter aya="77" index="98" sura="12" />
+        <quarter aya="101" index="99" sura="12" />
+        <quarter aya="5" index="100" sura="13" />
+        <quarter aya="19" index="101" sura="13" />
+        <quarter aya="35" index="102" sura="13" />
+        <quarter aya="10" index="103" sura="14" />
+        <quarter aya="28" index="104" sura="14" />
+        <quarter aya="1" index="105" sura="15" />
+        <quarter aya="50" index="106" sura="15" />
+        <quarter aya="1" index="107" sura="16" />
+        <quarter aya="30" index="108" sura="16" />
+        <quarter aya="51" index="109" sura="16" />
+        <quarter aya="75" index="110" sura="16" />
+        <quarter aya="90" index="111" sura="16" />
+        <quarter aya="111" index="112" sura="16" />
+        <quarter aya="1" index="113" sura="17" />
+        <quarter aya="23" index="114" sura="17" />
+        <quarter aya="50" index="115" sura="17" />
+        <quarter aya="70" index="116" sura="17" />
+        <quarter aya="99" index="117" sura="17" />
+        <quarter aya="17" index="118" sura="18" />
+        <quarter aya="32" index="119" sura="18" />
+        <quarter aya="51" index="120" sura="18" />
+        <quarter aya="75" index="121" sura="18" />
+        <quarter aya="99" index="122" sura="18" />
+        <quarter aya="22" index="123" sura="19" />
+        <quarter aya="59" index="124" sura="19" />
+        <quarter aya="1" index="125" sura="20" />
+        <quarter aya="55" index="126" sura="20" />
+        <quarter aya="83" index="127" sura="20" />
+        <quarter aya="111" index="128" sura="20" />
+        <quarter aya="1" index="129" sura="21" />
+        <quarter aya="29" index="130" sura="21" />
+        <quarter aya="51" index="131" sura="21" />
+        <quarter aya="83" index="132" sura="21" />
+        <quarter aya="1" index="133" sura="22" />
+        <quarter aya="19" index="134" sura="22" />
+        <quarter aya="38" index="135" sura="22" />
+        <quarter aya="60" index="136" sura="22" />
+        <quarter aya="1" index="137" sura="23" />
+        <quarter aya="36" index="138" sura="23" />
+        <quarter aya="75" index="139" sura="23" />
+        <quarter aya="1" index="140" sura="24" />
+        <quarter aya="21" index="141" sura="24" />
+        <quarter aya="35" index="142" sura="24" />
+        <quarter aya="53" index="143" sura="24" />
+        <quarter aya="1" index="144" sura="25" />
+        <quarter aya="21" index="145" sura="25" />
+        <quarter aya="53" index="146" sura="25" />
+        <quarter aya="1" index="147" sura="26" />
+        <quarter aya="52" index="148" sura="26" />
+        <quarter aya="111" index="149" sura="26" />
+        <quarter aya="181" index="150" sura="26" />
+        <quarter aya="1" index="151" sura="27" />
+        <quarter aya="27" index="152" sura="27" />
+        <quarter aya="56" index="153" sura="27" />
+        <quarter aya="82" index="154" sura="27" />
+        <quarter aya="12" index="155" sura="28" />
+        <quarter aya="29" index="156" sura="28" />
+        <quarter aya="51" index="157" sura="28" />
+        <quarter aya="76" index="158" sura="28" />
+        <quarter aya="1" index="159" sura="29" />
+        <quarter aya="26" index="160" sura="29" />
+        <quarter aya="46" index="161" sura="29" />
+        <quarter aya="1" index="162" sura="30" />
+        <quarter aya="31" index="163" sura="30" />
+        <quarter aya="54" index="164" sura="30" />
+        <quarter aya="22" index="165" sura="31" />
+        <quarter aya="11" index="166" sura="32" />
+        <quarter aya="1" index="167" sura="33" />
+        <quarter aya="18" index="168" sura="33" />
+        <quarter aya="31" index="169" sura="33" />
+        <quarter aya="51" index="170" sura="33" />
+        <quarter aya="60" index="171" sura="33" />
+        <quarter aya="10" index="172" sura="34" />
+        <quarter aya="24" index="173" sura="34" />
+        <quarter aya="46" index="174" sura="34" />
+        <quarter aya="15" index="175" sura="35" />
+        <quarter aya="41" index="176" sura="35" />
+        <quarter aya="28" index="177" sura="36" />
+        <quarter aya="60" index="178" sura="36" />
+        <quarter aya="22" index="179" sura="37" />
+        <quarter aya="83" index="180" sura="37" />
+        <quarter aya="145" index="181" sura="37" />
+        <quarter aya="21" index="182" sura="38" />
+        <quarter aya="52" index="183" sura="38" />
+        <quarter aya="8" index="184" sura="39" />
+        <quarter aya="32" index="185" sura="39" />
+        <quarter aya="53" index="186" sura="39" />
+        <quarter aya="1" index="187" sura="40" />
+        <quarter aya="21" index="188" sura="40" />
+        <quarter aya="41" index="189" sura="40" />
+        <quarter aya="66" index="190" sura="40" />
+        <quarter aya="9" index="191" sura="41" />
+        <quarter aya="25" index="192" sura="41" />
+        <quarter aya="47" index="193" sura="41" />
+        <quarter aya="13" index="194" sura="42" />
+        <quarter aya="27" index="195" sura="42" />
+        <quarter aya="51" index="196" sura="42" />
+        <quarter aya="24" index="197" sura="43" />
+        <quarter aya="57" index="198" sura="43" />
+        <quarter aya="17" index="199" sura="44" />
+        <quarter aya="12" index="200" sura="45" />
+        <quarter aya="1" index="201" sura="46" />
+        <quarter aya="21" index="202" sura="46" />
+        <quarter aya="10" index="203" sura="47" />
+        <quarter aya="33" index="204" sura="47" />
+        <quarter aya="18" index="205" sura="48" />
+        <quarter aya="1" index="206" sura="49" />
+        <quarter aya="14" index="207" sura="49" />
+        <quarter aya="27" index="208" sura="50" />
+        <quarter aya="31" index="209" sura="51" />
+        <quarter aya="24" index="210" sura="52" />
+        <quarter aya="26" index="211" sura="53" />
+        <quarter aya="9" index="212" sura="54" />
+        <quarter aya="1" index="213" sura="55" />
+        <quarter aya="1" index="214" sura="56" />
+        <quarter aya="75" index="215" sura="56" />
+        <quarter aya="16" index="216" sura="57" />
+        <quarter aya="1" index="217" sura="58" />
+        <quarter aya="14" index="218" sura="58" />
+        <quarter aya="11" index="219" sura="59" />
+        <quarter aya="7" index="220" sura="60" />
+        <quarter aya="1" index="221" sura="62" />
+        <quarter aya="4" index="222" sura="63" />
+        <quarter aya="1" index="223" sura="65" />
+        <quarter aya="1" index="224" sura="66" />
+        <quarter aya="1" index="225" sura="67" />
+        <quarter aya="1" index="226" sura="68" />
+        <quarter aya="1" index="227" sura="69" />
+        <quarter aya="19" index="228" sura="70" />
+        <quarter aya="1" index="229" sura="72" />
+        <quarter aya="20" index="230" sura="73" />
+        <quarter aya="1" index="231" sura="75" />
+        <quarter aya="19" index="232" sura="76" />
+        <quarter aya="1" index="233" sura="78" />
+        <quarter aya="1" index="234" sura="80" />
+        <quarter aya="1" index="235" sura="82" />
+        <quarter aya="1" index="236" sura="84" />
+        <quarter aya="1" index="237" sura="87" />
+        <quarter aya="1" index="238" sura="90" />
+        <quarter aya="1" index="239" sura="94" />
+        <quarter aya="9" index="240" sura="100" />
+    </hizbs>
+    <manzils alias="stations">
+        <manzil aya="1" index="1" sura="1" />
+        <manzil aya="1" index="2" sura="5" />
+        <manzil aya="1" index="3" sura="10" />
+        <manzil aya="1" index="4" sura="17" />
+        <manzil aya="1" index="5" sura="26" />
+        <manzil aya="1" index="6" sura="37" />
+        <manzil aya="1" index="7" sura="50" />
+    </manzils>
+    <rukus alias="sections">
+        <ruku aya="1" index="1" sura="1" />
+        <ruku aya="1" index="2" sura="2" />
+        <ruku aya="8" index="3" sura="2" />
+        <ruku aya="21" index="4" sura="2" />
+        <ruku aya="30" index="5" sura="2" />
+        <ruku aya="40" index="6" sura="2" />
+        <ruku aya="47" index="7" sura="2" />
+        <ruku aya="60" index="8" sura="2" />
+        <ruku aya="62" index="9" sura="2" />
+        <ruku aya="72" index="10" sura="2" />
+        <ruku aya="83" index="11" sura="2" />
+        <ruku aya="87" index="12" sura="2" />
+        <ruku aya="97" index="13" sura="2" />
+        <ruku aya="104" index="14" sura="2" />
+        <ruku aya="113" index="15" sura="2" />
+        <ruku aya="122" index="16" sura="2" />
+        <ruku aya="130" index="17" sura="2" />
+        <ruku aya="142" index="18" sura="2" />
+        <ruku aya="148" index="19" sura="2" />
+        <ruku aya="153" index="20" sura="2" />
+        <ruku aya="164" index="21" sura="2" />
+        <ruku aya="168" index="22" sura="2" />
+        <ruku aya="177" index="23" sura="2" />
+        <ruku aya="183" index="24" sura="2" />
+        <ruku aya="189" index="25" sura="2" />
+        <ruku aya="197" index="26" sura="2" />
+        <ruku aya="211" index="27" sura="2" />
+        <ruku aya="217" index="28" sura="2" />
+        <ruku aya="222" index="29" sura="2" />
+        <ruku aya="229" index="30" sura="2" />
+        <ruku aya="232" index="31" sura="2" />
+        <ruku aya="236" index="32" sura="2" />
+        <ruku aya="243" index="33" sura="2" />
+        <ruku aya="249" index="34" sura="2" />
+        <ruku aya="254" index="35" sura="2" />
+        <ruku aya="258" index="36" sura="2" />
+        <ruku aya="261" index="37" sura="2" />
+        <ruku aya="267" index="38" sura="2" />
+        <ruku aya="274" index="39" sura="2" />
+        <ruku aya="282" index="40" sura="2" />
+        <ruku aya="284" index="41" sura="2" />
+        <ruku aya="1" index="42" sura="3" />
+        <ruku aya="10" index="43" sura="3" />
+        <ruku aya="21" index="44" sura="3" />
+        <ruku aya="31" index="45" sura="3" />
+        <ruku aya="42" index="46" sura="3" />
+        <ruku aya="55" index="47" sura="3" />
+        <ruku aya="64" index="48" sura="3" />
+        <ruku aya="72" index="49" sura="3" />
+        <ruku aya="81" index="50" sura="3" />
+        <ruku aya="92" index="51" sura="3" />
+        <ruku aya="102" index="52" sura="3" />
+        <ruku aya="110" index="53" sura="3" />
+        <ruku aya="121" index="54" sura="3" />
+        <ruku aya="130" index="55" sura="3" />
+        <ruku aya="144" index="56" sura="3" />
+        <ruku aya="149" index="57" sura="3" />
+        <ruku aya="156" index="58" sura="3" />
+        <ruku aya="172" index="59" sura="3" />
+        <ruku aya="181" index="60" sura="3" />
+        <ruku aya="190" index="61" sura="3" />
+        <ruku aya="1" index="62" sura="4" />
+        <ruku aya="11" index="63" sura="4" />
+        <ruku aya="15" index="64" sura="4" />
+        <ruku aya="23" index="65" sura="4" />
+        <ruku aya="26" index="66" sura="4" />
+        <ruku aya="34" index="67" sura="4" />
+        <ruku aya="43" index="68" sura="4" />
+        <ruku aya="51" index="69" sura="4" />
+        <ruku aya="60" index="70" sura="4" />
+        <ruku aya="71" index="71" sura="4" />
+        <ruku aya="77" index="72" sura="4" />
+        <ruku aya="88" index="73" sura="4" />
+        <ruku aya="92" index="74" sura="4" />
+        <ruku aya="97" index="75" sura="4" />
+        <ruku aya="101" index="76" sura="4" />
+        <ruku aya="105" index="77" sura="4" />
+        <ruku aya="113" index="78" sura="4" />
+        <ruku aya="116" index="79" sura="4" />
+        <ruku aya="127" index="80" sura="4" />
+        <ruku aya="135" index="81" sura="4" />
+        <ruku aya="142" index="82" sura="4" />
+        <ruku aya="153" index="83" sura="4" />
+        <ruku aya="163" index="84" sura="4" />
+        <ruku aya="172" index="85" sura="4" />
+        <ruku aya="1" index="86" sura="5" />
+        <ruku aya="6" index="87" sura="5" />
+        <ruku aya="12" index="88" sura="5" />
+        <ruku aya="20" index="89" sura="5" />
+        <ruku aya="27" index="90" sura="5" />
+        <ruku aya="35" index="91" sura="5" />
+        <ruku aya="44" index="92" sura="5" />
+        <ruku aya="51" index="93" sura="5" />
+        <ruku aya="57" index="94" sura="5" />
+        <ruku aya="67" index="95" sura="5" />
+        <ruku aya="78" index="96" sura="5" />
+        <ruku aya="87" index="97" sura="5" />
+        <ruku aya="94" index="98" sura="5" />
+        <ruku aya="101" index="99" sura="5" />
+        <ruku aya="109" index="100" sura="5" />
+        <ruku aya="116" index="101" sura="5" />
+        <ruku aya="1" index="102" sura="6" />
+        <ruku aya="11" index="103" sura="6" />
+        <ruku aya="21" index="104" sura="6" />
+        <ruku aya="31" index="105" sura="6" />
+        <ruku aya="42" index="106" sura="6" />
+        <ruku aya="51" index="107" sura="6" />
+        <ruku aya="56" index="108" sura="6" />
+        <ruku aya="61" index="109" sura="6" />
+        <ruku aya="71" index="110" sura="6" />
+        <ruku aya="83" index="111" sura="6" />
+        <ruku aya="91" index="112" sura="6" />
+        <ruku aya="95" index="113" sura="6" />
+        <ruku aya="101" index="114" sura="6" />
+        <ruku aya="111" index="115" sura="6" />
+        <ruku aya="122" index="116" sura="6" />
+        <ruku aya="130" index="117" sura="6" />
+        <ruku aya="141" index="118" sura="6" />
+        <ruku aya="145" index="119" sura="6" />
+        <ruku aya="151" index="120" sura="6" />
+        <ruku aya="155" index="121" sura="6" />
+        <ruku aya="1" index="122" sura="7" />
+        <ruku aya="11" index="123" sura="7" />
+        <ruku aya="26" index="124" sura="7" />
+        <ruku aya="32" index="125" sura="7" />
+        <ruku aya="40" index="126" sura="7" />
+        <ruku aya="48" index="127" sura="7" />
+        <ruku aya="54" index="128" sura="7" />
+        <ruku aya="59" index="129" sura="7" />
+        <ruku aya="65" index="130" sura="7" />
+        <ruku aya="73" index="131" sura="7" />
+        <ruku aya="85" index="132" sura="7" />
+        <ruku aya="94" index="133" sura="7" />
+        <ruku aya="100" index="134" sura="7" />
+        <ruku aya="109" index="135" sura="7" />
+        <ruku aya="127" index="136" sura="7" />
+        <ruku aya="130" index="137" sura="7" />
+        <ruku aya="142" index="138" sura="7" />
+        <ruku aya="148" index="139" sura="7" />
+        <ruku aya="152" index="140" sura="7" />
+        <ruku aya="158" index="141" sura="7" />
+        <ruku aya="163" index="142" sura="7" />
+        <ruku aya="172" index="143" sura="7" />
+        <ruku aya="182" index="144" sura="7" />
+        <ruku aya="189" index="145" sura="7" />
+        <ruku aya="1" index="146" sura="8" />
+        <ruku aya="11" index="147" sura="8" />
+        <ruku aya="20" index="148" sura="8" />
+        <ruku aya="29" index="149" sura="8" />
+        <ruku aya="38" index="150" sura="8" />
+        <ruku aya="45" index="151" sura="8" />
+        <ruku aya="49" index="152" sura="8" />
+        <ruku aya="59" index="153" sura="8" />
+        <ruku aya="65" index="154" sura="8" />
+        <ruku aya="70" index="155" sura="8" />
+        <ruku aya="1" index="156" sura="9" />
+        <ruku aya="7" index="157" sura="9" />
+        <ruku aya="17" index="158" sura="9" />
+        <ruku aya="25" index="159" sura="9" />
+        <ruku aya="30" index="160" sura="9" />
+        <ruku aya="38" index="161" sura="9" />
+        <ruku aya="43" index="162" sura="9" />
+        <ruku aya="60" index="163" sura="9" />
+        <ruku aya="67" index="164" sura="9" />
+        <ruku aya="73" index="165" sura="9" />
+        <ruku aya="81" index="166" sura="9" />
+        <ruku aya="90" index="167" sura="9" />
+        <ruku aya="100" index="168" sura="9" />
+        <ruku aya="111" index="169" sura="9" />
+        <ruku aya="119" index="170" sura="9" />
+        <ruku aya="123" index="171" sura="9" />
+        <ruku aya="1" index="172" sura="10" />
+        <ruku aya="11" index="173" sura="10" />
+        <ruku aya="21" index="174" sura="10" />
+        <ruku aya="31" index="175" sura="10" />
+        <ruku aya="41" index="176" sura="10" />
+        <ruku aya="54" index="177" sura="10" />
+        <ruku aya="61" index="178" sura="10" />
+        <ruku aya="71" index="179" sura="10" />
+        <ruku aya="83" index="180" sura="10" />
+        <ruku aya="93" index="181" sura="10" />
+        <ruku aya="104" index="182" sura="10" />
+        <ruku aya="1" index="183" sura="11" />
+        <ruku aya="9" index="184" sura="11" />
+        <ruku aya="25" index="185" sura="11" />
+        <ruku aya="36" index="186" sura="11" />
+        <ruku aya="50" index="187" sura="11" />
+        <ruku aya="61" index="188" sura="11" />
+        <ruku aya="69" index="189" sura="11" />
+        <ruku aya="84" index="190" sura="11" />
+        <ruku aya="96" index="191" sura="11" />
+        <ruku aya="110" index="192" sura="11" />
+        <ruku aya="1" index="193" sura="12" />
+        <ruku aya="7" index="194" sura="12" />
+        <ruku aya="21" index="195" sura="12" />
+        <ruku aya="30" index="196" sura="12" />
+        <ruku aya="36" index="197" sura="12" />
+        <ruku aya="43" index="198" sura="12" />
+        <ruku aya="50" index="199" sura="12" />
+        <ruku aya="58" index="200" sura="12" />
+        <ruku aya="69" index="201" sura="12" />
+        <ruku aya="80" index="202" sura="12" />
+        <ruku aya="94" index="203" sura="12" />
+        <ruku aya="105" index="204" sura="12" />
+        <ruku aya="1" index="205" sura="13" />
+        <ruku aya="8" index="206" sura="13" />
+        <ruku aya="19" index="207" sura="13" />
+        <ruku aya="27" index="208" sura="13" />
+        <ruku aya="32" index="209" sura="13" />
+        <ruku aya="38" index="210" sura="13" />
+        <ruku aya="1" index="211" sura="14" />
+        <ruku aya="7" index="212" sura="14" />
+        <ruku aya="13" index="213" sura="14" />
+        <ruku aya="22" index="214" sura="14" />
+        <ruku aya="28" index="215" sura="14" />
+        <ruku aya="35" index="216" sura="14" />
+        <ruku aya="42" index="217" sura="14" />
+        <ruku aya="1" index="218" sura="15" />
+        <ruku aya="16" index="219" sura="15" />
+        <ruku aya="26" index="220" sura="15" />
+        <ruku aya="45" index="221" sura="15" />
+        <ruku aya="61" index="222" sura="15" />
+        <ruku aya="80" index="223" sura="15" />
+        <ruku aya="1" index="224" sura="16" />
+        <ruku aya="10" index="225" sura="16" />
+        <ruku aya="22" index="226" sura="16" />
+        <ruku aya="26" index="227" sura="16" />
+        <ruku aya="35" index="228" sura="16" />
+        <ruku aya="41" index="229" sura="16" />
+        <ruku aya="51" index="230" sura="16" />
+        <ruku aya="61" index="231" sura="16" />
+        <ruku aya="66" index="232" sura="16" />
+        <ruku aya="71" index="233" sura="16" />
+        <ruku aya="77" index="234" sura="16" />
+        <ruku aya="84" index="235" sura="16" />
+        <ruku aya="90" index="236" sura="16" />
+        <ruku aya="101" index="237" sura="16" />
+        <ruku aya="111" index="238" sura="16" />
+        <ruku aya="120" index="239" sura="16" />
+        <ruku aya="1" index="240" sura="17" />
+        <ruku aya="11" index="241" sura="17" />
+        <ruku aya="23" index="242" sura="17" />
+        <ruku aya="31" index="243" sura="17" />
+        <ruku aya="41" index="244" sura="17" />
+        <ruku aya="53" index="245" sura="17" />
+        <ruku aya="61" index="246" sura="17" />
+        <ruku aya="71" index="247" sura="17" />
+        <ruku aya="78" index="248" sura="17" />
+        <ruku aya="85" index="249" sura="17" />
+        <ruku aya="94" index="250" sura="17" />
+        <ruku aya="101" index="251" sura="17" />
+        <ruku aya="1" index="252" sura="18" />
+        <ruku aya="13" index="253" sura="18" />
+        <ruku aya="18" index="254" sura="18" />
+        <ruku aya="23" index="255" sura="18" />
+        <ruku aya="32" index="256" sura="18" />
+        <ruku aya="45" index="257" sura="18" />
+        <ruku aya="50" index="258" sura="18" />
+        <ruku aya="54" index="259" sura="18" />
+        <ruku aya="60" index="260" sura="18" />
+        <ruku aya="71" index="261" sura="18" />
+        <ruku aya="83" index="262" sura="18" />
+        <ruku aya="102" index="263" sura="18" />
+        <ruku aya="1" index="264" sura="19" />
+        <ruku aya="16" index="265" sura="19" />
+        <ruku aya="41" index="266" sura="19" />
+        <ruku aya="51" index="267" sura="19" />
+        <ruku aya="66" index="268" sura="19" />
+        <ruku aya="83" index="269" sura="19" />
+        <ruku aya="1" index="270" sura="20" />
+        <ruku aya="25" index="271" sura="20" />
+        <ruku aya="55" index="272" sura="20" />
+        <ruku aya="77" index="273" sura="20" />
+        <ruku aya="90" index="274" sura="20" />
+        <ruku aya="105" index="275" sura="20" />
+        <ruku aya="116" index="276" sura="20" />
+        <ruku aya="129" index="277" sura="20" />
+        <ruku aya="1" index="278" sura="21" />
+        <ruku aya="11" index="279" sura="21" />
+        <ruku aya="30" index="280" sura="21" />
+        <ruku aya="42" index="281" sura="21" />
+        <ruku aya="51" index="282" sura="21" />
+        <ruku aya="76" index="283" sura="21" />
+        <ruku aya="94" index="284" sura="21" />
+        <ruku aya="1" index="285" sura="22" />
+        <ruku aya="11" index="286" sura="22" />
+        <ruku aya="23" index="287" sura="22" />
+        <ruku aya="26" index="288" sura="22" />
+        <ruku aya="34" index="289" sura="22" />
+        <ruku aya="39" index="290" sura="22" />
+        <ruku aya="49" index="291" sura="22" />
+        <ruku aya="58" index="292" sura="22" />
+        <ruku aya="65" index="293" sura="22" />
+        <ruku aya="73" index="294" sura="22" />
+        <ruku aya="1" index="295" sura="23" />
+        <ruku aya="23" index="296" sura="23" />
+        <ruku aya="33" index="297" sura="23" />
+        <ruku aya="51" index="298" sura="23" />
+        <ruku aya="78" index="299" sura="23" />
+        <ruku aya="93" index="300" sura="23" />
+        <ruku aya="1" index="301" sura="24" />
+        <ruku aya="11" index="302" sura="24" />
+        <ruku aya="21" index="303" sura="24" />
+        <ruku aya="27" index="304" sura="24" />
+        <ruku aya="35" index="305" sura="24" />
+        <ruku aya="41" index="306" sura="24" />
+        <ruku aya="51" index="307" sura="24" />
+        <ruku aya="58" index="308" sura="24" />
+        <ruku aya="62" index="309" sura="24" />
+        <ruku aya="1" index="310" sura="25" />
+        <ruku aya="10" index="311" sura="25" />
+        <ruku aya="21" index="312" sura="25" />
+        <ruku aya="35" index="313" sura="25" />
+        <ruku aya="45" index="314" sura="25" />
+        <ruku aya="61" index="315" sura="25" />
+        <ruku aya="1" index="316" sura="26" />
+        <ruku aya="10" index="317" sura="26" />
+        <ruku aya="34" index="318" sura="26" />
+        <ruku aya="53" index="319" sura="26" />
+        <ruku aya="70" index="320" sura="26" />
+        <ruku aya="105" index="321" sura="26" />
+        <ruku aya="123" index="322" sura="26" />
+        <ruku aya="141" index="323" sura="26" />
+        <ruku aya="160" index="324" sura="26" />
+        <ruku aya="176" index="325" sura="26" />
+        <ruku aya="192" index="326" sura="26" />
+        <ruku aya="1" index="327" sura="27" />
+        <ruku aya="15" index="328" sura="27" />
+        <ruku aya="32" index="329" sura="27" />
+        <ruku aya="45" index="330" sura="27" />
+        <ruku aya="59" index="331" sura="27" />
+        <ruku aya="67" index="332" sura="27" />
+        <ruku aya="83" index="333" sura="27" />
+        <ruku aya="1" index="334" sura="28" />
+        <ruku aya="14" index="335" sura="28" />
+        <ruku aya="22" index="336" sura="28" />
+        <ruku aya="29" index="337" sura="28" />
+        <ruku aya="43" index="338" sura="28" />
+        <ruku aya="51" index="339" sura="28" />
+        <ruku aya="61" index="340" sura="28" />
+        <ruku aya="76" index="341" sura="28" />
+        <ruku aya="1" index="342" sura="29" />
+        <ruku aya="14" index="343" sura="29" />
+        <ruku aya="23" index="344" sura="29" />
+        <ruku aya="31" index="345" sura="29" />
+        <ruku aya="45" index="346" sura="29" />
+        <ruku aya="52" index="347" sura="29" />
+        <ruku aya="64" index="348" sura="29" />
+        <ruku aya="1" index="349" sura="30" />
+        <ruku aya="11" index="350" sura="30" />
+        <ruku aya="20" index="351" sura="30" />
+        <ruku aya="28" index="352" sura="30" />
+        <ruku aya="41" index="353" sura="30" />
+        <ruku aya="54" index="354" sura="30" />
+        <ruku aya="1" index="355" sura="31" />
+        <ruku aya="12" index="356" sura="31" />
+        <ruku aya="20" index="357" sura="31" />
+        <ruku aya="1" index="358" sura="32" />
+        <ruku aya="12" index="359" sura="32" />
+        <ruku aya="23" index="360" sura="32" />
+        <ruku aya="1" index="361" sura="33" />
+        <ruku aya="9" index="362" sura="33" />
+        <ruku aya="21" index="363" sura="33" />
+        <ruku aya="28" index="364" sura="33" />
+        <ruku aya="35" index="365" sura="33" />
+        <ruku aya="41" index="366" sura="33" />
+        <ruku aya="53" index="367" sura="33" />
+        <ruku aya="59" index="368" sura="33" />
+        <ruku aya="69" index="369" sura="33" />
+        <ruku aya="1" index="370" sura="34" />
+        <ruku aya="10" index="371" sura="34" />
+        <ruku aya="22" index="372" sura="34" />
+        <ruku aya="31" index="373" sura="34" />
+        <ruku aya="37" index="374" sura="34" />
+        <ruku aya="46" index="375" sura="34" />
+        <ruku aya="1" index="376" sura="35" />
+        <ruku aya="8" index="377" sura="35" />
+        <ruku aya="15" index="378" sura="35" />
+        <ruku aya="27" index="379" sura="35" />
+        <ruku aya="38" index="380" sura="35" />
+        <ruku aya="1" index="381" sura="36" />
+        <ruku aya="13" index="382" sura="36" />
+        <ruku aya="33" index="383" sura="36" />
+        <ruku aya="51" index="384" sura="36" />
+        <ruku aya="68" index="385" sura="36" />
+        <ruku aya="1" index="386" sura="37" />
+        <ruku aya="22" index="387" sura="37" />
+        <ruku aya="75" index="388" sura="37" />
+        <ruku aya="114" index="389" sura="37" />
+        <ruku aya="139" index="390" sura="37" />
+        <ruku aya="1" index="391" sura="38" />
+        <ruku aya="15" index="392" sura="38" />
+        <ruku aya="27" index="393" sura="38" />
+        <ruku aya="41" index="394" sura="38" />
+        <ruku aya="65" index="395" sura="38" />
+        <ruku aya="1" index="396" sura="39" />
+        <ruku aya="10" index="397" sura="39" />
+        <ruku aya="22" index="398" sura="39" />
+        <ruku aya="32" index="399" sura="39" />
+        <ruku aya="42" index="400" sura="39" />
+        <ruku aya="53" index="401" sura="39" />
+        <ruku aya="64" index="402" sura="39" />
+        <ruku aya="71" index="403" sura="39" />
+        <ruku aya="1" index="404" sura="40" />
+        <ruku aya="10" index="405" sura="40" />
+        <ruku aya="21" index="406" sura="40" />
+        <ruku aya="28" index="407" sura="40" />
+        <ruku aya="38" index="408" sura="40" />
+        <ruku aya="51" index="409" sura="40" />
+        <ruku aya="61" index="410" sura="40" />
+        <ruku aya="69" index="411" sura="40" />
+        <ruku aya="79" index="412" sura="40" />
+        <ruku aya="1" index="413" sura="41" />
+        <ruku aya="9" index="414" sura="41" />
+        <ruku aya="19" index="415" sura="41" />
+        <ruku aya="26" index="416" sura="41" />
+        <ruku aya="33" index="417" sura="41" />
+        <ruku aya="45" index="418" sura="41" />
+        <ruku aya="1" index="419" sura="42" />
+        <ruku aya="10" index="420" sura="42" />
+        <ruku aya="20" index="421" sura="42" />
+        <ruku aya="30" index="422" sura="42" />
+        <ruku aya="44" index="423" sura="42" />
+        <ruku aya="1" index="424" sura="43" />
+        <ruku aya="16" index="425" sura="43" />
+        <ruku aya="26" index="426" sura="43" />
+        <ruku aya="36" index="427" sura="43" />
+        <ruku aya="46" index="428" sura="43" />
+        <ruku aya="57" index="429" sura="43" />
+        <ruku aya="68" index="430" sura="43" />
+        <ruku aya="1" index="431" sura="44" />
+        <ruku aya="30" index="432" sura="44" />
+        <ruku aya="43" index="433" sura="44" />
+        <ruku aya="1" index="434" sura="45" />
+        <ruku aya="12" index="435" sura="45" />
+        <ruku aya="22" index="436" sura="45" />
+        <ruku aya="27" index="437" sura="45" />
+        <ruku aya="1" index="438" sura="46" />
+        <ruku aya="11" index="439" sura="46" />
+        <ruku aya="21" index="440" sura="46" />
+        <ruku aya="27" index="441" sura="46" />
+        <ruku aya="1" index="442" sura="47" />
+        <ruku aya="12" index="443" sura="47" />
+        <ruku aya="20" index="444" sura="47" />
+        <ruku aya="29" index="445" sura="47" />
+        <ruku aya="1" index="446" sura="48" />
+        <ruku aya="11" index="447" sura="48" />
+        <ruku aya="18" index="448" sura="48" />
+        <ruku aya="27" index="449" sura="48" />
+        <ruku aya="1" index="450" sura="49" />
+        <ruku aya="11" index="451" sura="49" />
+        <ruku aya="1" index="452" sura="50" />
+        <ruku aya="16" index="453" sura="50" />
+        <ruku aya="30" index="454" sura="50" />
+        <ruku aya="1" index="455" sura="51" />
+        <ruku aya="24" index="456" sura="51" />
+        <ruku aya="47" index="457" sura="51" />
+        <ruku aya="1" index="458" sura="52" />
+        <ruku aya="29" index="459" sura="52" />
+        <ruku aya="1" index="460" sura="53" />
+        <ruku aya="26" index="461" sura="53" />
+        <ruku aya="33" index="462" sura="53" />
+        <ruku aya="1" index="463" sura="54" />
+        <ruku aya="23" index="464" sura="54" />
+        <ruku aya="41" index="465" sura="54" />
+        <ruku aya="1" index="466" sura="55" />
+        <ruku aya="26" index="467" sura="55" />
+        <ruku aya="46" index="468" sura="55" />
+        <ruku aya="1" index="469" sura="56" />
+        <ruku aya="39" index="470" sura="56" />
+        <ruku aya="75" index="471" sura="56" />
+        <ruku aya="1" index="472" sura="57" />
+        <ruku aya="11" index="473" sura="57" />
+        <ruku aya="20" index="474" sura="57" />
+        <ruku aya="26" index="475" sura="57" />
+        <ruku aya="1" index="476" sura="58" />
+        <ruku aya="7" index="477" sura="58" />
+        <ruku aya="14" index="478" sura="58" />
+        <ruku aya="1" index="479" sura="59" />
+        <ruku aya="11" index="480" sura="59" />
+        <ruku aya="18" index="481" sura="59" />
+        <ruku aya="1" index="482" sura="60" />
+        <ruku aya="7" index="483" sura="60" />
+        <ruku aya="1" index="484" sura="61" />
+        <ruku aya="10" index="485" sura="61" />
+        <ruku aya="1" index="486" sura="62" />
+        <ruku aya="9" index="487" sura="62" />
+        <ruku aya="1" index="488" sura="63" />
+        <ruku aya="9" index="489" sura="63" />
+        <ruku aya="1" index="490" sura="64" />
+        <ruku aya="11" index="491" sura="64" />
+        <ruku aya="1" index="492" sura="65" />
+        <ruku aya="8" index="493" sura="65" />
+        <ruku aya="1" index="494" sura="66" />
+        <ruku aya="8" index="495" sura="66" />
+        <ruku aya="1" index="496" sura="67" />
+        <ruku aya="15" index="497" sura="67" />
+        <ruku aya="1" index="498" sura="68" />
+        <ruku aya="34" index="499" sura="68" />
+        <ruku aya="1" index="500" sura="69" />
+        <ruku aya="38" index="501" sura="69" />
+        <ruku aya="1" index="502" sura="70" />
+        <ruku aya="36" index="503" sura="70" />
+        <ruku aya="1" index="504" sura="71" />
+        <ruku aya="21" index="505" sura="71" />
+        <ruku aya="1" index="506" sura="72" />
+        <ruku aya="20" index="507" sura="72" />
+        <ruku aya="1" index="508" sura="73" />
+        <ruku aya="20" index="509" sura="73" />
+        <ruku aya="1" index="510" sura="74" />
+        <ruku aya="32" index="511" sura="74" />
+        <ruku aya="1" index="512" sura="75" />
+        <ruku aya="31" index="513" sura="75" />
+        <ruku aya="1" index="514" sura="76" />
+        <ruku aya="23" index="515" sura="76" />
+        <ruku aya="1" index="516" sura="77" />
+        <ruku aya="41" index="517" sura="77" />
+        <ruku aya="1" index="518" sura="78" />
+        <ruku aya="31" index="519" sura="78" />
+        <ruku aya="1" index="520" sura="79" />
+        <ruku aya="27" index="521" sura="79" />
+        <ruku aya="1" index="522" sura="80" />
+        <ruku aya="1" index="523" sura="81" />
+        <ruku aya="1" index="524" sura="82" />
+        <ruku aya="1" index="525" sura="83" />
+        <ruku aya="1" index="526" sura="84" />
+        <ruku aya="1" index="527" sura="85" />
+        <ruku aya="1" index="528" sura="86" />
+        <ruku aya="1" index="529" sura="87" />
+        <ruku aya="1" index="530" sura="88" />
+        <ruku aya="1" index="531" sura="89" />
+        <ruku aya="1" index="532" sura="90" />
+        <ruku aya="1" index="533" sura="91" />
+        <ruku aya="1" index="534" sura="92" />
+        <ruku aya="1" index="535" sura="93" />
+        <ruku aya="1" index="536" sura="94" />
+        <ruku aya="1" index="537" sura="95" />
+        <ruku aya="1" index="538" sura="96" />
+        <ruku aya="1" index="539" sura="97" />
+        <ruku aya="1" index="540" sura="98" />
+        <ruku aya="1" index="541" sura="99" />
+        <ruku aya="1" index="542" sura="100" />
+        <ruku aya="1" index="543" sura="101" />
+        <ruku aya="1" index="544" sura="102" />
+        <ruku aya="1" index="545" sura="103" />
+        <ruku aya="1" index="546" sura="104" />
+        <ruku aya="1" index="547" sura="105" />
+        <ruku aya="1" index="548" sura="106" />
+        <ruku aya="1" index="549" sura="107" />
+        <ruku aya="1" index="550" sura="108" />
+        <ruku aya="1" index="551" sura="109" />
+        <ruku aya="1" index="552" sura="110" />
+        <ruku aya="1" index="553" sura="111" />
+        <ruku aya="1" index="554" sura="112" />
+        <ruku aya="1" index="555" sura="113" />
+        <ruku aya="1" index="556" sura="114" />
+    </rukus>
+    <pages>
+        <page aya="1" index="1" sura="1" />
+        <page aya="1" index="2" sura="2" />
+        <page aya="6" index="3" sura="2" />
+        <page aya="17" index="4" sura="2" />
+        <page aya="25" index="5" sura="2" />
+        <page aya="30" index="6" sura="2" />
+        <page aya="38" index="7" sura="2" />
+        <page aya="49" index="8" sura="2" />
+        <page aya="58" index="9" sura="2" />
+        <page aya="62" index="10" sura="2" />
+        <page aya="70" index="11" sura="2" />
+        <page aya="77" index="12" sura="2" />
+        <page aya="84" index="13" sura="2" />
+        <page aya="89" index="14" sura="2" />
+        <page aya="94" index="15" sura="2" />
+        <page aya="102" index="16" sura="2" />
+        <page aya="106" index="17" sura="2" />
+        <page aya="113" index="18" sura="2" />
+        <page aya="120" index="19" sura="2" />
+        <page aya="127" index="20" sura="2" />
+        <page aya="135" index="21" sura="2" />
+        <page aya="142" index="22" sura="2" />
+        <page aya="146" index="23" sura="2" />
+        <page aya="154" index="24" sura="2" />
+        <page aya="164" index="25" sura="2" />
+        <page aya="170" index="26" sura="2" />
+        <page aya="177" index="27" sura="2" />
+        <page aya="182" index="28" sura="2" />
+        <page aya="187" index="29" sura="2" />
+        <page aya="191" index="30" sura="2" />
+        <page aya="197" index="31" sura="2" />
+        <page aya="203" index="32" sura="2" />
+        <page aya="211" index="33" sura="2" />
+        <page aya="216" index="34" sura="2" />
+        <page aya="220" index="35" sura="2" />
+        <page aya="225" index="36" sura="2" />
+        <page aya="231" index="37" sura="2" />
+        <page aya="234" index="38" sura="2" />
+        <page aya="238" index="39" sura="2" />
+        <page aya="246" index="40" sura="2" />
+        <page aya="249" index="41" sura="2" />
+        <page aya="253" index="42" sura="2" />
+        <page aya="257" index="43" sura="2" />
+        <page aya="260" index="44" sura="2" />
+        <page aya="265" index="45" sura="2" />
+        <page aya="270" index="46" sura="2" />
+        <page aya="275" index="47" sura="2" />
+        <page aya="282" index="48" sura="2" />
+        <page aya="283" index="49" sura="2" />
+        <page aya="1" index="50" sura="3" />
+        <page aya="10" index="51" sura="3" />
+        <page aya="16" index="52" sura="3" />
+        <page aya="23" index="53" sura="3" />
+        <page aya="30" index="54" sura="3" />
+        <page aya="38" index="55" sura="3" />
+        <page aya="46" index="56" sura="3" />
+        <page aya="53" index="57" sura="3" />
+        <page aya="62" index="58" sura="3" />
+        <page aya="71" index="59" sura="3" />
+        <page aya="78" index="60" sura="3" />
+        <page aya="84" index="61" sura="3" />
+        <page aya="92" index="62" sura="3" />
+        <page aya="101" index="63" sura="3" />
+        <page aya="109" index="64" sura="3" />
+        <page aya="116" index="65" sura="3" />
+        <page aya="122" index="66" sura="3" />
+        <page aya="133" index="67" sura="3" />
+        <page aya="141" index="68" sura="3" />
+        <page aya="149" index="69" sura="3" />
+        <page aya="154" index="70" sura="3" />
+        <page aya="158" index="71" sura="3" />
+        <page aya="166" index="72" sura="3" />
+        <page aya="174" index="73" sura="3" />
+        <page aya="181" index="74" sura="3" />
+        <page aya="187" index="75" sura="3" />
+        <page aya="195" index="76" sura="3" />
+        <page aya="1" index="77" sura="4" />
+        <page aya="7" index="78" sura="4" />
+        <page aya="12" index="79" sura="4" />
+        <page aya="15" index="80" sura="4" />
+        <page aya="20" index="81" sura="4" />
+        <page aya="24" index="82" sura="4" />
+        <page aya="27" index="83" sura="4" />
+        <page aya="34" index="84" sura="4" />
+        <page aya="38" index="85" sura="4" />
+        <page aya="45" index="86" sura="4" />
+        <page aya="52" index="87" sura="4" />
+        <page aya="60" index="88" sura="4" />
+        <page aya="66" index="89" sura="4" />
+        <page aya="75" index="90" sura="4" />
+        <page aya="80" index="91" sura="4" />
+        <page aya="87" index="92" sura="4" />
+        <page aya="92" index="93" sura="4" />
+        <page aya="95" index="94" sura="4" />
+        <page aya="102" index="95" sura="4" />
+        <page aya="106" index="96" sura="4" />
+        <page aya="114" index="97" sura="4" />
+        <page aya="122" index="98" sura="4" />
+        <page aya="128" index="99" sura="4" />
+        <page aya="135" index="100" sura="4" />
+        <page aya="141" index="101" sura="4" />
+        <page aya="148" index="102" sura="4" />
+        <page aya="155" index="103" sura="4" />
+        <page aya="163" index="104" sura="4" />
+        <page aya="171" index="105" sura="4" />
+        <page aya="176" index="106" sura="4" />
+        <page aya="3" index="107" sura="5" />
+        <page aya="6" index="108" sura="5" />
+        <page aya="10" index="109" sura="5" />
+        <page aya="14" index="110" sura="5" />
+        <page aya="18" index="111" sura="5" />
+        <page aya="24" index="112" sura="5" />
+        <page aya="32" index="113" sura="5" />
+        <page aya="37" index="114" sura="5" />
+        <page aya="42" index="115" sura="5" />
+        <page aya="46" index="116" sura="5" />
+        <page aya="51" index="117" sura="5" />
+        <page aya="58" index="118" sura="5" />
+        <page aya="65" index="119" sura="5" />
+        <page aya="71" index="120" sura="5" />
+        <page aya="77" index="121" sura="5" />
+        <page aya="83" index="122" sura="5" />
+        <page aya="90" index="123" sura="5" />
+        <page aya="96" index="124" sura="5" />
+        <page aya="104" index="125" sura="5" />
+        <page aya="109" index="126" sura="5" />
+        <page aya="114" index="127" sura="5" />
+        <page aya="1" index="128" sura="6" />
+        <page aya="9" index="129" sura="6" />
+        <page aya="19" index="130" sura="6" />
+        <page aya="28" index="131" sura="6" />
+        <page aya="36" index="132" sura="6" />
+        <page aya="45" index="133" sura="6" />
+        <page aya="53" index="134" sura="6" />
+        <page aya="60" index="135" sura="6" />
+        <page aya="69" index="136" sura="6" />
+        <page aya="74" index="137" sura="6" />
+        <page aya="82" index="138" sura="6" />
+        <page aya="91" index="139" sura="6" />
+        <page aya="95" index="140" sura="6" />
+        <page aya="102" index="141" sura="6" />
+        <page aya="111" index="142" sura="6" />
+        <page aya="119" index="143" sura="6" />
+        <page aya="125" index="144" sura="6" />
+        <page aya="132" index="145" sura="6" />
+        <page aya="138" index="146" sura="6" />
+        <page aya="143" index="147" sura="6" />
+        <page aya="147" index="148" sura="6" />
+        <page aya="152" index="149" sura="6" />
+        <page aya="158" index="150" sura="6" />
+        <page aya="1" index="151" sura="7" />
+        <page aya="12" index="152" sura="7" />
+        <page aya="23" index="153" sura="7" />
+        <page aya="31" index="154" sura="7" />
+        <page aya="38" index="155" sura="7" />
+        <page aya="44" index="156" sura="7" />
+        <page aya="52" index="157" sura="7" />
+        <page aya="58" index="158" sura="7" />
+        <page aya="68" index="159" sura="7" />
+        <page aya="74" index="160" sura="7" />
+        <page aya="82" index="161" sura="7" />
+        <page aya="88" index="162" sura="7" />
+        <page aya="96" index="163" sura="7" />
+        <page aya="105" index="164" sura="7" />
+        <page aya="121" index="165" sura="7" />
+        <page aya="131" index="166" sura="7" />
+        <page aya="138" index="167" sura="7" />
+        <page aya="144" index="168" sura="7" />
+        <page aya="150" index="169" sura="7" />
+        <page aya="156" index="170" sura="7" />
+        <page aya="160" index="171" sura="7" />
+        <page aya="164" index="172" sura="7" />
+        <page aya="171" index="173" sura="7" />
+        <page aya="179" index="174" sura="7" />
+        <page aya="188" index="175" sura="7" />
+        <page aya="196" index="176" sura="7" />
+        <page aya="1" index="177" sura="8" />
+        <page aya="9" index="178" sura="8" />
+        <page aya="17" index="179" sura="8" />
+        <page aya="26" index="180" sura="8" />
+        <page aya="34" index="181" sura="8" />
+        <page aya="41" index="182" sura="8" />
+        <page aya="46" index="183" sura="8" />
+        <page aya="53" index="184" sura="8" />
+        <page aya="62" index="185" sura="8" />
+        <page aya="70" index="186" sura="8" />
+        <page aya="1" index="187" sura="9" />
+        <page aya="7" index="188" sura="9" />
+        <page aya="14" index="189" sura="9" />
+        <page aya="21" index="190" sura="9" />
+        <page aya="27" index="191" sura="9" />
+        <page aya="32" index="192" sura="9" />
+        <page aya="37" index="193" sura="9" />
+        <page aya="41" index="194" sura="9" />
+        <page aya="48" index="195" sura="9" />
+        <page aya="55" index="196" sura="9" />
+        <page aya="62" index="197" sura="9" />
+        <page aya="69" index="198" sura="9" />
+        <page aya="73" index="199" sura="9" />
+        <page aya="80" index="200" sura="9" />
+        <page aya="87" index="201" sura="9" />
+        <page aya="94" index="202" sura="9" />
+        <page aya="100" index="203" sura="9" />
+        <page aya="107" index="204" sura="9" />
+        <page aya="112" index="205" sura="9" />
+        <page aya="118" index="206" sura="9" />
+        <page aya="123" index="207" sura="9" />
+        <page aya="1" index="208" sura="10" />
+        <page aya="7" index="209" sura="10" />
+        <page aya="15" index="210" sura="10" />
+        <page aya="21" index="211" sura="10" />
+        <page aya="26" index="212" sura="10" />
+        <page aya="34" index="213" sura="10" />
+        <page aya="43" index="214" sura="10" />
+        <page aya="54" index="215" sura="10" />
+        <page aya="62" index="216" sura="10" />
+        <page aya="71" index="217" sura="10" />
+        <page aya="79" index="218" sura="10" />
+        <page aya="89" index="219" sura="10" />
+        <page aya="98" index="220" sura="10" />
+        <page aya="107" index="221" sura="10" />
+        <page aya="6" index="222" sura="11" />
+        <page aya="13" index="223" sura="11" />
+        <page aya="20" index="224" sura="11" />
+        <page aya="29" index="225" sura="11" />
+        <page aya="38" index="226" sura="11" />
+        <page aya="46" index="227" sura="11" />
+        <page aya="54" index="228" sura="11" />
+        <page aya="63" index="229" sura="11" />
+        <page aya="72" index="230" sura="11" />
+        <page aya="82" index="231" sura="11" />
+        <page aya="89" index="232" sura="11" />
+        <page aya="98" index="233" sura="11" />
+        <page aya="109" index="234" sura="11" />
+        <page aya="118" index="235" sura="11" />
+        <page aya="5" index="236" sura="12" />
+        <page aya="15" index="237" sura="12" />
+        <page aya="23" index="238" sura="12" />
+        <page aya="31" index="239" sura="12" />
+        <page aya="38" index="240" sura="12" />
+        <page aya="44" index="241" sura="12" />
+        <page aya="53" index="242" sura="12" />
+        <page aya="64" index="243" sura="12" />
+        <page aya="70" index="244" sura="12" />
+        <page aya="79" index="245" sura="12" />
+        <page aya="87" index="246" sura="12" />
+        <page aya="96" index="247" sura="12" />
+        <page aya="104" index="248" sura="12" />
+        <page aya="1" index="249" sura="13" />
+        <page aya="6" index="250" sura="13" />
+        <page aya="14" index="251" sura="13" />
+        <page aya="19" index="252" sura="13" />
+        <page aya="29" index="253" sura="13" />
+        <page aya="35" index="254" sura="13" />
+        <page aya="43" index="255" sura="13" />
+        <page aya="6" index="256" sura="14" />
+        <page aya="11" index="257" sura="14" />
+        <page aya="19" index="258" sura="14" />
+        <page aya="25" index="259" sura="14" />
+        <page aya="34" index="260" sura="14" />
+        <page aya="43" index="261" sura="14" />
+        <page aya="1" index="262" sura="15" />
+        <page aya="16" index="263" sura="15" />
+        <page aya="32" index="264" sura="15" />
+        <page aya="52" index="265" sura="15" />
+        <page aya="71" index="266" sura="15" />
+        <page aya="91" index="267" sura="15" />
+        <page aya="7" index="268" sura="16" />
+        <page aya="15" index="269" sura="16" />
+        <page aya="27" index="270" sura="16" />
+        <page aya="35" index="271" sura="16" />
+        <page aya="43" index="272" sura="16" />
+        <page aya="55" index="273" sura="16" />
+        <page aya="65" index="274" sura="16" />
+        <page aya="73" index="275" sura="16" />
+        <page aya="80" index="276" sura="16" />
+        <page aya="88" index="277" sura="16" />
+        <page aya="94" index="278" sura="16" />
+        <page aya="103" index="279" sura="16" />
+        <page aya="111" index="280" sura="16" />
+        <page aya="119" index="281" sura="16" />
+        <page aya="1" index="282" sura="17" />
+        <page aya="8" index="283" sura="17" />
+        <page aya="18" index="284" sura="17" />
+        <page aya="28" index="285" sura="17" />
+        <page aya="39" index="286" sura="17" />
+        <page aya="50" index="287" sura="17" />
+        <page aya="59" index="288" sura="17" />
+        <page aya="67" index="289" sura="17" />
+        <page aya="76" index="290" sura="17" />
+        <page aya="87" index="291" sura="17" />
+        <page aya="97" index="292" sura="17" />
+        <page aya="105" index="293" sura="17" />
+        <page aya="5" index="294" sura="18" />
+        <page aya="16" index="295" sura="18" />
+        <page aya="21" index="296" sura="18" />
+        <page aya="28" index="297" sura="18" />
+        <page aya="35" index="298" sura="18" />
+        <page aya="46" index="299" sura="18" />
+        <page aya="54" index="300" sura="18" />
+        <page aya="62" index="301" sura="18" />
+        <page aya="75" index="302" sura="18" />
+        <page aya="84" index="303" sura="18" />
+        <page aya="98" index="304" sura="18" />
+        <page aya="1" index="305" sura="19" />
+        <page aya="12" index="306" sura="19" />
+        <page aya="26" index="307" sura="19" />
+        <page aya="39" index="308" sura="19" />
+        <page aya="52" index="309" sura="19" />
+        <page aya="65" index="310" sura="19" />
+        <page aya="77" index="311" sura="19" />
+        <page aya="96" index="312" sura="19" />
+        <page aya="13" index="313" sura="20" />
+        <page aya="38" index="314" sura="20" />
+        <page aya="52" index="315" sura="20" />
+        <page aya="65" index="316" sura="20" />
+        <page aya="77" index="317" sura="20" />
+        <page aya="88" index="318" sura="20" />
+        <page aya="99" index="319" sura="20" />
+        <page aya="114" index="320" sura="20" />
+        <page aya="126" index="321" sura="20" />
+        <page aya="1" index="322" sura="21" />
+        <page aya="11" index="323" sura="21" />
+        <page aya="25" index="324" sura="21" />
+        <page aya="36" index="325" sura="21" />
+        <page aya="45" index="326" sura="21" />
+        <page aya="58" index="327" sura="21" />
+        <page aya="73" index="328" sura="21" />
+        <page aya="82" index="329" sura="21" />
+        <page aya="91" index="330" sura="21" />
+        <page aya="102" index="331" sura="21" />
+        <page aya="1" index="332" sura="22" />
+        <page aya="6" index="333" sura="22" />
+        <page aya="16" index="334" sura="22" />
+        <page aya="24" index="335" sura="22" />
+        <page aya="31" index="336" sura="22" />
+        <page aya="39" index="337" sura="22" />
+        <page aya="47" index="338" sura="22" />
+        <page aya="56" index="339" sura="22" />
+        <page aya="65" index="340" sura="22" />
+        <page aya="73" index="341" sura="22" />
+        <page aya="1" index="342" sura="23" />
+        <page aya="18" index="343" sura="23" />
+        <page aya="28" index="344" sura="23" />
+        <page aya="43" index="345" sura="23" />
+        <page aya="60" index="346" sura="23" />
+        <page aya="75" index="347" sura="23" />
+        <page aya="90" index="348" sura="23" />
+        <page aya="105" index="349" sura="23" />
+        <page aya="1" index="350" sura="24" />
+        <page aya="11" index="351" sura="24" />
+        <page aya="21" index="352" sura="24" />
+        <page aya="28" index="353" sura="24" />
+        <page aya="32" index="354" sura="24" />
+        <page aya="37" index="355" sura="24" />
+        <page aya="44" index="356" sura="24" />
+        <page aya="54" index="357" sura="24" />
+        <page aya="59" index="358" sura="24" />
+        <page aya="62" index="359" sura="24" />
+        <page aya="3" index="360" sura="25" />
+        <page aya="12" index="361" sura="25" />
+        <page aya="21" index="362" sura="25" />
+        <page aya="33" index="363" sura="25" />
+        <page aya="44" index="364" sura="25" />
+        <page aya="56" index="365" sura="25" />
+        <page aya="68" index="366" sura="25" />
+        <page aya="1" index="367" sura="26" />
+        <page aya="20" index="368" sura="26" />
+        <page aya="40" index="369" sura="26" />
+        <page aya="61" index="370" sura="26" />
+        <page aya="84" index="371" sura="26" />
+        <page aya="112" index="372" sura="26" />
+        <page aya="137" index="373" sura="26" />
+        <page aya="160" index="374" sura="26" />
+        <page aya="184" index="375" sura="26" />
+        <page aya="207" index="376" sura="26" />
+        <page aya="1" index="377" sura="27" />
+        <page aya="14" index="378" sura="27" />
+        <page aya="23" index="379" sura="27" />
+        <page aya="36" index="380" sura="27" />
+        <page aya="45" index="381" sura="27" />
+        <page aya="56" index="382" sura="27" />
+        <page aya="64" index="383" sura="27" />
+        <page aya="77" index="384" sura="27" />
+        <page aya="89" index="385" sura="27" />
+        <page aya="6" index="386" sura="28" />
+        <page aya="14" index="387" sura="28" />
+        <page aya="22" index="388" sura="28" />
+        <page aya="29" index="389" sura="28" />
+        <page aya="36" index="390" sura="28" />
+        <page aya="44" index="391" sura="28" />
+        <page aya="51" index="392" sura="28" />
+        <page aya="60" index="393" sura="28" />
+        <page aya="71" index="394" sura="28" />
+        <page aya="78" index="395" sura="28" />
+        <page aya="85" index="396" sura="28" />
+        <page aya="7" index="397" sura="29" />
+        <page aya="15" index="398" sura="29" />
+        <page aya="24" index="399" sura="29" />
+        <page aya="31" index="400" sura="29" />
+        <page aya="39" index="401" sura="29" />
+        <page aya="46" index="402" sura="29" />
+        <page aya="53" index="403" sura="29" />
+        <page aya="64" index="404" sura="29" />
+        <page aya="6" index="405" sura="30" />
+        <page aya="16" index="406" sura="30" />
+        <page aya="25" index="407" sura="30" />
+        <page aya="33" index="408" sura="30" />
+        <page aya="42" index="409" sura="30" />
+        <page aya="51" index="410" sura="30" />
+        <page aya="1" index="411" sura="31" />
+        <page aya="12" index="412" sura="31" />
+        <page aya="20" index="413" sura="31" />
+        <page aya="29" index="414" sura="31" />
+        <page aya="1" index="415" sura="32" />
+        <page aya="12" index="416" sura="32" />
+        <page aya="21" index="417" sura="32" />
+        <page aya="1" index="418" sura="33" />
+        <page aya="7" index="419" sura="33" />
+        <page aya="16" index="420" sura="33" />
+        <page aya="23" index="421" sura="33" />
+        <page aya="31" index="422" sura="33" />
+        <page aya="36" index="423" sura="33" />
+        <page aya="44" index="424" sura="33" />
+        <page aya="51" index="425" sura="33" />
+        <page aya="55" index="426" sura="33" />
+        <page aya="63" index="427" sura="33" />
+        <page aya="1" index="428" sura="34" />
+        <page aya="8" index="429" sura="34" />
+        <page aya="15" index="430" sura="34" />
+        <page aya="23" index="431" sura="34" />
+        <page aya="32" index="432" sura="34" />
+        <page aya="40" index="433" sura="34" />
+        <page aya="49" index="434" sura="34" />
+        <page aya="4" index="435" sura="35" />
+        <page aya="12" index="436" sura="35" />
+        <page aya="19" index="437" sura="35" />
+        <page aya="31" index="438" sura="35" />
+        <page aya="39" index="439" sura="35" />
+        <page aya="45" index="440" sura="35" />
+        <page aya="13" index="441" sura="36" />
+        <page aya="28" index="442" sura="36" />
+        <page aya="41" index="443" sura="36" />
+        <page aya="55" index="444" sura="36" />
+        <page aya="71" index="445" sura="36" />
+        <page aya="1" index="446" sura="37" />
+        <page aya="25" index="447" sura="37" />
+        <page aya="52" index="448" sura="37" />
+        <page aya="77" index="449" sura="37" />
+        <page aya="103" index="450" sura="37" />
+        <page aya="127" index="451" sura="37" />
+        <page aya="154" index="452" sura="37" />
+        <page aya="1" index="453" sura="38" />
+        <page aya="17" index="454" sura="38" />
+        <page aya="27" index="455" sura="38" />
+        <page aya="43" index="456" sura="38" />
+        <page aya="62" index="457" sura="38" />
+        <page aya="84" index="458" sura="38" />
+        <page aya="6" index="459" sura="39" />
+        <page aya="11" index="460" sura="39" />
+        <page aya="22" index="461" sura="39" />
+        <page aya="32" index="462" sura="39" />
+        <page aya="41" index="463" sura="39" />
+        <page aya="48" index="464" sura="39" />
+        <page aya="57" index="465" sura="39" />
+        <page aya="68" index="466" sura="39" />
+        <page aya="75" index="467" sura="39" />
+        <page aya="8" index="468" sura="40" />
+        <page aya="17" index="469" sura="40" />
+        <page aya="26" index="470" sura="40" />
+        <page aya="34" index="471" sura="40" />
+        <page aya="41" index="472" sura="40" />
+        <page aya="50" index="473" sura="40" />
+        <page aya="59" index="474" sura="40" />
+        <page aya="67" index="475" sura="40" />
+        <page aya="78" index="476" sura="40" />
+        <page aya="1" index="477" sura="41" />
+        <page aya="12" index="478" sura="41" />
+        <page aya="21" index="479" sura="41" />
+        <page aya="30" index="480" sura="41" />
+        <page aya="39" index="481" sura="41" />
+        <page aya="47" index="482" sura="41" />
+        <page aya="1" index="483" sura="42" />
+        <page aya="11" index="484" sura="42" />
+        <page aya="16" index="485" sura="42" />
+        <page aya="23" index="486" sura="42" />
+        <page aya="32" index="487" sura="42" />
+        <page aya="45" index="488" sura="42" />
+        <page aya="52" index="489" sura="42" />
+        <page aya="11" index="490" sura="43" />
+        <page aya="23" index="491" sura="43" />
+        <page aya="34" index="492" sura="43" />
+        <page aya="48" index="493" sura="43" />
+        <page aya="61" index="494" sura="43" />
+        <page aya="74" index="495" sura="43" />
+        <page aya="1" index="496" sura="44" />
+        <page aya="19" index="497" sura="44" />
+        <page aya="40" index="498" sura="44" />
+        <page aya="1" index="499" sura="45" />
+        <page aya="14" index="500" sura="45" />
+        <page aya="23" index="501" sura="45" />
+        <page aya="33" index="502" sura="45" />
+        <page aya="6" index="503" sura="46" />
+        <page aya="15" index="504" sura="46" />
+        <page aya="21" index="505" sura="46" />
+        <page aya="29" index="506" sura="46" />
+        <page aya="1" index="507" sura="47" />
+        <page aya="12" index="508" sura="47" />
+        <page aya="20" index="509" sura="47" />
+        <page aya="30" index="510" sura="47" />
+        <page aya="1" index="511" sura="48" />
+        <page aya="10" index="512" sura="48" />
+        <page aya="16" index="513" sura="48" />
+        <page aya="24" index="514" sura="48" />
+        <page aya="29" index="515" sura="48" />
+        <page aya="5" index="516" sura="49" />
+        <page aya="12" index="517" sura="49" />
+        <page aya="1" index="518" sura="50" />
+        <page aya="16" index="519" sura="50" />
+        <page aya="36" index="520" sura="50" />
+        <page aya="7" index="521" sura="51" />
+        <page aya="31" index="522" sura="51" />
+        <page aya="52" index="523" sura="51" />
+        <page aya="15" index="524" sura="52" />
+        <page aya="32" index="525" sura="52" />
+        <page aya="1" index="526" sura="53" />
+        <page aya="27" index="527" sura="53" />
+        <page aya="45" index="528" sura="53" />
+        <page aya="7" index="529" sura="54" />
+        <page aya="28" index="530" sura="54" />
+        <page aya="50" index="531" sura="54" />
+        <page aya="17" index="532" sura="55" />
+        <page aya="41" index="533" sura="55" />
+        <page aya="68" index="534" sura="55" />
+        <page aya="17" index="535" sura="56" />
+        <page aya="51" index="536" sura="56" />
+        <page aya="77" index="537" sura="56" />
+        <page aya="4" index="538" sura="57" />
+        <page aya="12" index="539" sura="57" />
+        <page aya="19" index="540" sura="57" />
+        <page aya="25" index="541" sura="57" />
+        <page aya="1" index="542" sura="58" />
+        <page aya="7" index="543" sura="58" />
+        <page aya="12" index="544" sura="58" />
+        <page aya="22" index="545" sura="58" />
+        <page aya="4" index="546" sura="59" />
+        <page aya="10" index="547" sura="59" />
+        <page aya="17" index="548" sura="59" />
+        <page aya="1" index="549" sura="60" />
+        <page aya="6" index="550" sura="60" />
+        <page aya="12" index="551" sura="60" />
+        <page aya="6" index="552" sura="61" />
+        <page aya="1" index="553" sura="62" />
+        <page aya="9" index="554" sura="62" />
+        <page aya="5" index="555" sura="63" />
+        <page aya="1" index="556" sura="64" />
+        <page aya="10" index="557" sura="64" />
+        <page aya="1" index="558" sura="65" />
+        <page aya="6" index="559" sura="65" />
+        <page aya="1" index="560" sura="66" />
+        <page aya="8" index="561" sura="66" />
+        <page aya="1" index="562" sura="67" />
+        <page aya="13" index="563" sura="67" />
+        <page aya="27" index="564" sura="67" />
+        <page aya="16" index="565" sura="68" />
+        <page aya="43" index="566" sura="68" />
+        <page aya="9" index="567" sura="69" />
+        <page aya="35" index="568" sura="69" />
+        <page aya="11" index="569" sura="70" />
+        <page aya="40" index="570" sura="70" />
+        <page aya="11" index="571" sura="71" />
+        <page aya="1" index="572" sura="72" />
+        <page aya="14" index="573" sura="72" />
+        <page aya="1" index="574" sura="73" />
+        <page aya="20" index="575" sura="73" />
+        <page aya="18" index="576" sura="74" />
+        <page aya="48" index="577" sura="74" />
+        <page aya="20" index="578" sura="75" />
+        <page aya="6" index="579" sura="76" />
+        <page aya="26" index="580" sura="76" />
+        <page aya="20" index="581" sura="77" />
+        <page aya="1" index="582" sura="78" />
+        <page aya="31" index="583" sura="78" />
+        <page aya="16" index="584" sura="79" />
+        <page aya="1" index="585" sura="80" />
+        <page aya="1" index="586" sura="81" />
+        <page aya="1" index="587" sura="82" />
+        <page aya="7" index="588" sura="83" />
+        <page aya="35" index="589" sura="83" />
+        <page aya="1" index="590" sura="85" />
+        <page aya="1" index="591" sura="86" />
+        <page aya="16" index="592" sura="87" />
+        <page aya="1" index="593" sura="89" />
+        <page aya="24" index="594" sura="89" />
+        <page aya="1" index="595" sura="91" />
+        <page aya="15" index="596" sura="92" />
+        <page aya="1" index="597" sura="95" />
+        <page aya="1" index="598" sura="97" />
+        <page aya="8" index="599" sura="98" />
+        <page aya="10" index="600" sura="100" />
+        <page aya="1" index="601" sura="103" />
+        <page aya="1" index="602" sura="106" />
+        <page aya="1" index="603" sura="109" />
+        <page aya="1" index="604" sura="112" />
+    </pages>
+    <sajdas>
+        <sajda aya="206" index="1" sura="7" type="recommended" />
+        <sajda aya="15" index="2" sura="13" type="recommended" />
+        <sajda aya="50" index="3" sura="16" type="recommended" />
+        <sajda aya="109" index="4" sura="17" type="recommended" />
+        <sajda aya="58" index="5" sura="19" type="recommended" />
+        <sajda aya="18" index="6" sura="22" type="recommended" />
+        <sajda aya="77" index="7" sura="22" type="recommended" />
+        <sajda aya="60" index="8" sura="25" type="recommended" />
+        <sajda aya="26" index="9" sura="27" type="recommended" />
+        <sajda aya="15" index="10" sura="32" type="obligatory" />
+        <sajda aya="24" index="11" sura="38" type="recommended" />
+        <sajda aya="38" index="12" sura="41" type="obligatory" />
+        <sajda aya="62" index="13" sura="53" type="obligatory" />
+        <sajda aya="21" index="14" sura="84" type="recommended" />
+        <sajda aya="19" index="15" sura="96" type="obligatory" />
+    </sajdas>
+</quran>
