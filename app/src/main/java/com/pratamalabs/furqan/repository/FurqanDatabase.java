@@ -28,7 +28,7 @@ import java.io.OutputStream;
 public class FurqanDatabase extends SQLiteOpenHelper {
 
     public final static String DATABASE_PATH = "/data/data/com.pratamalabs.furqan/databases/";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static String DATABASE_NAME = "furqan.sqlite";
     private static String DATABASE_VERSION_TAG = "dbversion.txt";
     private final Context dbContext;
@@ -57,6 +57,16 @@ public class FurqanDatabase extends SQLiteOpenHelper {
         }
     }
 
+    void upgrade1DbLink(SQLiteDatabase sqLiteDatabase) {
+        String update1 = "UPDATE Sources SET DownloadLink = replace( DownloadLink, 'http://andikapratama.com/data/', 'https://raw.githubusercontent.com/andikapratama/furqan/master/app/QuranData/ExtraTranslations/' ), UpdateLink = replace( UpdateLink, 'http://andikapratama.com/data/', 'https://raw.githubusercontent.com/andikapratama/furqan/master/app/QuranData/ExtraTranslations/' ) WHERE Id IN (45,108,109,110)";
+        sqLiteDatabase.execSQL(update1);
+    }
+
+    private void setDbVersion() throws IOException {
+        String dbVersionPath = DATABASE_PATH + DATABASE_VERSION_TAG;
+        FileUtils.write(new File(dbVersionPath), String.valueOf(DATABASE_VERSION));
+    }
+
     private void copyDataBase() throws IOException {
         InputStream myInput = dbContext.getAssets().open(DATABASE_NAME);
         String outFileName = DATABASE_PATH + DATABASE_NAME;
@@ -72,8 +82,7 @@ public class FurqanDatabase extends SQLiteOpenHelper {
         myOutput.close();
         myInput.close();
 
-        String dbVersionPath = DATABASE_PATH + DATABASE_VERSION_TAG;
-        FileUtils.write(new File(dbVersionPath), String.valueOf(DATABASE_VERSION));
+        setDbVersion();
 
         //set default folding
         PreferenceManager.getDefaultSharedPreferences(dbContext.getApplicationContext())
@@ -86,23 +95,36 @@ public class FurqanDatabase extends SQLiteOpenHelper {
     public void openDataBase() throws SQLException {
         String dbPath = DATABASE_PATH + DATABASE_NAME;
         dataBase = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
+        checkAndUpdateVersion(dataBase);
+    }
+
+    private void checkAndUpdateVersion(SQLiteDatabase sqLiteDatabase) {
+
+        String dbVersionPath = DATABASE_PATH + DATABASE_VERSION_TAG;
+        int dbLocalVersion;
+        try {
+            File file = new File(dbVersionPath);
+            String version = FileUtils.readFileToString(file);
+            dbLocalVersion = Integer.parseInt(version);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+
+        if (dbLocalVersion < DATABASE_VERSION) {
+            if (dbLocalVersion == 1) {
+                upgrade1DbLink(sqLiteDatabase);
+            }
+            try {
+                setDbVersion();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private boolean checkDataBase() {
         SQLiteDatabase checkDB = null;
-        String dbVersionPath = DATABASE_PATH + DATABASE_VERSION_TAG;
-
-        try {
-            File file = new File(dbVersionPath);
-            String version = FileUtils.readFileToString(file);
-
-            if (DATABASE_VERSION != Integer.parseInt(version)) {
-                return false;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
 
         boolean exist = false;
         try {
@@ -127,6 +149,5 @@ public class FurqanDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i2) {
-
     }
 }

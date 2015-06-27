@@ -202,9 +202,14 @@ public class SourcesFragment extends ListFragment {
                             Toast.makeText(getActivity(), "Error downloading " + source.name, Toast.LENGTH_LONG).show();
                             return;
                         }
-                        service.saveTanzilTranslationResourceAndEnableIt(source.id, result);
+                        boolean success = service.saveTanzilTranslationResourceAndEnableIt(source.id, result);
                         result.delete();
-                        Toast.makeText(getActivity(), source.name + " added", Toast.LENGTH_LONG).show();
+                        if (success) {
+                            Toast.makeText(getActivity(), source.name + " added", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(getActivity(), "Error downloading " + source.name, Toast.LENGTH_LONG).show();
+                            return;
+                        }
                         loadSources();
                     }
                 });

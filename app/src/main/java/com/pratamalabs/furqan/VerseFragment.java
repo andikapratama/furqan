@@ -31,10 +31,10 @@ import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.UiThread;
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 /**
  * A dummy fragment representing a section of the app, but that simply
@@ -42,17 +42,10 @@ import java.util.ArrayList;
  */
 @EFragment
 public class VerseFragment extends Fragment {
-    public final String[] keys = {FurqanSettings.ARABIC_SIZE,
+    public static final Set<String> keys = Utilities.newHashSet(FurqanSettings.ARABIC_SIZE,
             FurqanSettings.ARABIC_TYPEFACE,
-            FurqanSettings.TEXT_SIZE};
-    SharedPreferences.OnSharedPreferenceChangeListener listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
-        @Override
-        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-            if (ArrayUtils.contains(keys, s)) {
-                adapter.notifyDataSetChanged();
-            }
-        }
-    };
+            "arabic",
+            FurqanSettings.TEXT_SIZE);
     @Bean
     FurqanDao dao;
     @Bean
@@ -65,6 +58,14 @@ public class VerseFragment extends Fragment {
     private Verse mverse;
     private ListView listView;
     private VerseListAdapter adapter;
+    SharedPreferences.OnSharedPreferenceChangeListener listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+            if (keys.contains(s)) {
+                adapter.notifyDataSetChanged();
+            }
+        }
+    };
 
     @Override
     public void onResume() {
@@ -97,6 +98,9 @@ public class VerseFragment extends Fragment {
     @Background
     void loadVerse() {
         mverse = dao.getVerse(surahNo, verseNo, settings.getSelectedTranslations());
+        for (Translation translation : settings.getSelectedTranslations()) {
+            keys.add(translation.getTanzilId());
+        }
         showVerse();
     }
 
@@ -109,7 +113,7 @@ public class VerseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        preference = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        preference = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
         View rootView = inflater.inflate(R.layout.fragment_main_dummy, container, false);
         listView = (ListView) rootView.findViewById(R.id.listView);
         surahNo = getArguments().getInt(Constants.SURAH_NUMBER, 1);
@@ -128,7 +132,7 @@ public class VerseFragment extends Fragment {
                 } else {
                     viewHolder.setFold(i == 0, true);
                 }
-                settings.setTranslationFold(i == 0 ? "arabic" : String.valueOf(trans.getTanzilId()), viewHolder.isFolded());
+                settings.setTranslationFold(preference, i == 0 ? "arabic" : String.valueOf(trans.getTanzilId()), viewHolder.isFolded());
             }
         });
 

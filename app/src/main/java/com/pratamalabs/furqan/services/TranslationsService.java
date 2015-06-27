@@ -79,15 +79,16 @@ public class TranslationsService {
 
 
         boolean result = true;
-        List<String> lines = new ArrayList<String>();
+        List<String> lines;
         try {
             lines = FileUtils.readLines(file);
         } catch (IOException e) {
             e.printStackTrace();
             result = false;
+            return result;
         }
 
-        List<TranslationData> datas = new ArrayList<TranslationData>(lines.size());
+        List<TranslationData> datas = new ArrayList<>(lines.size());
 
         for (String line : lines) {
             if (line.isEmpty() || line.startsWith("#"))

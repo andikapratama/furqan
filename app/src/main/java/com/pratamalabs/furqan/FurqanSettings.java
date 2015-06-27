@@ -142,6 +142,10 @@ public class FurqanSettings {
         PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext()).edit().putBoolean(key, visible).apply();
     }
 
+    public void setTranslationFold(SharedPreferences preference, String key, boolean visible) {
+        preference.edit().putBoolean(key, visible).apply();
+    }
+
     public boolean getTranslationFold(String key) {
         return PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext()).getBoolean(key, false);
     }
