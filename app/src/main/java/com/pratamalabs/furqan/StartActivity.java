@@ -11,7 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.util.Pair;
 import android.view.Menu;
@@ -30,8 +30,10 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.Locale;
 
+import io.fabric.sdk.android.Fabric;
+
 @EActivity(R.layout.activity_start)
-public class StartActivity extends ActionBarActivity implements ActionBar.TabListener {
+public class StartActivity extends AppCompatActivity implements ActionBar.TabListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -62,7 +64,7 @@ public class StartActivity extends ActionBarActivity implements ActionBar.TabLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Crashlytics.start(this);
+        Fabric.with(this, new Crashlytics());
     }
 
     @AfterViews
@@ -145,6 +147,11 @@ public class StartActivity extends ActionBarActivity implements ActionBar.TabLis
             case R.id.action_settings:
 
                 intent = new Intent(this, SettingsActivity_.class);
+                startActivityForResult(intent, 0);
+                return true;
+            case R.id.action_recitation_cache:
+
+                intent = new Intent(this, RecitationSetting.class);
                 startActivityForResult(intent, 0);
                 return true;
             case R.id.action_lastread:

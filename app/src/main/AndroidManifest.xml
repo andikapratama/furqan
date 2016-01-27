@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pratamalabs.furqan"
     android:installLocation="auto"
-    android:versionCode="15"
-    android:versionName="1.5">
+    android:versionCode="17"
+    android:versionName="1.7">
 
-<uses-sdk
+    <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="20" />
 
@@ -13,21 +13,23 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".FurqanApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:theme="@style/FurqanTheme">
-
         <activity
             android:name=".StartActivity_"
             android:label="@string/title_activity_start"
             android:logo="@drawable/quran_white"
             android:theme="@style/FurqanTheme"
             android:windowSoftInputMode="stateHidden">
-
-
             <meta-data
                 android:name="android.app.default_searchable"
                 android:value=".SearchResultActivity_" />
@@ -37,7 +39,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -49,7 +50,6 @@
                 <data android:pathPattern=".*\\.fson" />
                 <data android:host="*" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".VerseActivity_"
@@ -64,7 +64,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartActivity_" />
-
         </activity>
         <activity
             android:name=".SearchResultActivity_"
@@ -77,7 +76,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartActivity_" />
-
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -95,6 +93,16 @@
         <meta-data
             android:name="com.crashlytics.ApiKey"
             android:value="2c722e32c3e42c37ef731655f5c7d7b9dc21e453" />
+
+        <activity
+            android:name=".RecitationSetting"
+            android:label="@string/title_activity_recitation_setting"
+            android:parentActivityName=".StartActivity_"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pratamalabs.furqan.StartActivity_" />
+        </activity>
     </application>
 
 </manifest>

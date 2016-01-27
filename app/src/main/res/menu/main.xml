@@ -30,4 +30,11 @@
         android:showAsAction="never"
         android:title="@string/action_lastread"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_recitation_cache"
+        android:icon="@drawable/ic_action_play"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_recitation_cache"
+        app:showAsAction="never" />
 </menu>

@@ -3,22 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/search"
-        android:actionViewClass="android.support.v7.widget.SearchView"
-        android:orderInCategory="100"
-        android:showAsAction="always"
-        android:title="@string/action_search"
-        app:actionViewClass="android.support.v7.widget.SearchView"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/action_share"
-        android:icon="@drawable/ic_action_share"
-        android:orderInCategory="100"
-        android:showAsAction="collapseActionView|ifRoom"
-        android:title="@string/share"
-        app:showAsAction="collapseActionView|ifRoom" />
-
-    <item
         android:id="@+id/action_play"
         android:icon="@drawable/ic_action_play"
         android:orderInCategory="100"
@@ -35,10 +19,39 @@
         app:showAsAction="collapseActionView|ifRoom" />
 
     <item
+        android:id="@+id/search"
+        android:actionViewClass="android.support.v7.widget.SearchView"
+        android:orderInCategory="100"
+        android:showAsAction="always|ifRoom"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_action_share"
+        android:orderInCategory="100"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:title="@string/share"
+        app:showAsAction="collapseActionView|ifRoom" />
+
+    <item
+        android:id="@+id/action_goto"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/jumpto"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_recitation_choice"
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="Choose Reciter"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_recitation_cache"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Download Recitation"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
@@ -46,11 +59,5 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_goto"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/jumpto"
         app:showAsAction="never" />
 </menu>

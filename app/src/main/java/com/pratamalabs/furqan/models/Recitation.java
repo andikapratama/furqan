@@ -7,6 +7,8 @@ public class Recitation {
     public final String subfolder;
     public final String name;
     public final String bitrate;
+    public boolean downloaded;
+    public int downloadedVerseCount;
 
     public Recitation(String subfolder, String name, String bitrate) {
         this.subfolder = subfolder;
@@ -16,5 +18,13 @@ public class Recitation {
 
     public String getTitle() {
         return String.format("%s - %s", name, bitrate);
+    }
+
+    public Boolean isComplete() {
+        return 6236 <= downloadedVerseCount;
+    }
+
+    public double downloadedPercentage() {
+        return downloadedVerseCount / 6236.0;
     }
 }

@@ -11,9 +11,12 @@ import android.util.Pair;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.koushikdutta.async.future.FutureCallback;
+import com.pratamalabs.furqan.events.RecitationsFinishedLoadingEvent;
 import com.pratamalabs.furqan.models.Recitation;
 import com.pratamalabs.furqan.models.Translation;
 import com.pratamalabs.furqan.repository.FurqanDao;
+import com.pratamalabs.furqan.services.EventBus;
 import com.pratamalabs.furqan.services.Utils;
 
 import org.androidannotations.annotations.AfterInject;
@@ -22,9 +25,12 @@ import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 import org.androidannotations.annotations.RootContext;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -40,26 +46,58 @@ public class FurqanSettings {
     @Bean
     FurqanDao dao;
 
+    @Bean
+    EventBus eventBus;
+
     @RootContext
     Context context;
     String typefaceKeyCache;
     //    private Map<String, Typeface> typefaceChoice;
     Typeface typeface;
     private List<Translation> selectedTranslations = new ArrayList<Translation>();
-    private List<Recitation> recitations;
+    private List<Recitation> recitations = new ArrayList<>();
+
+    public List<Recitation> getRecitations() {
+        return recitations;
+    }
 
     @Background
-    @AfterInject
-    public void init() {
-
+    public void refreshRecitation(FutureCallback<Boolean> callback) {
         try {
             Gson gson = new Gson();
             Type listType = new TypeToken<ArrayList<Recitation>>() {
             }.getType();
-            recitations = gson.fromJson(Utils.stringFromInputStream(context.getAssets().open("recitations.js")), listType);
+            if (recitations.size() == 0) {
+                recitations.addAll((Collection<? extends Recitation>) gson.fromJson(Utils.stringFromInputStream(context.getAssets().open("recitations.js")), listType));
+            }
+            File folder = context.getExternalFilesDir(null);
+            HashMap<String, File> subfolders = new HashMap<>();
+            for (File subFolder : folder.listFiles()) {
+                subfolders.put(subFolder.getName(), subFolder);
+            }
+
+            for (Recitation recitation : recitations) {
+                File subfolder = subfolders.get(recitation.subfolder);
+                if (subfolder != null) {
+                    recitation.downloaded = true;
+                    recitation.downloadedVerseCount = subfolder.listFiles().length;
+                } else {
+                    recitation.downloaded = false;
+                    recitation.downloadedVerseCount = 0;
+                }
+            }
+
+            eventBus.post(new RecitationsFinishedLoadingEvent());
+            if (callback != null) callback.onCompleted(null, true);
         } catch (IOException e) {
             e.printStackTrace();
+            if (callback != null) callback.onCompleted(e, false);
         }
+    }
+
+    @AfterInject
+    public void init() {
+        refreshRecitation(null);
     }
 
     public List<String> getAvailableRecitationsName() {
@@ -72,6 +110,28 @@ public class FurqanSettings {
 
     public void showRecitationsDialog(Context context) {
         showRecitationsDialog(context, null);
+    }
+
+    public void showRecitationsDownloadDialog(final Context context, final DialogInterface.OnClickListener listener) {
+        List<String> recitationsText = getAvailableRecitationsName();
+        Dialog dialog = new AlertDialog.Builder(context)
+                .setTitle("Recitations")
+                .setSingleChoiceItems(recitationsText.toArray(new String[recitationsText.size()]), PreferenceManager.getDefaultSharedPreferences(context).getInt("recitation", 0), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        PreferenceManager.getDefaultSharedPreferences(context).edit().putInt("recitation", which).commit();
+                        if (listener != null) {
+                            listener.onClick(dialog, which);
+                        }
+                    }
+                })
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).create();
+        dialog.show();
     }
 
     public void showRecitationsDialog(final Context context, final DialogInterface.OnClickListener listener) {

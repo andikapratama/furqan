@@ -24,6 +24,13 @@
         <item name="android:actionMenuTextColor">@android:color/black</item>
     </style>
 
+    <!-- ToolBar -->
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
     <!-- Application theme. -->
     <style name="FurqanTheme" parent="FurqanBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->

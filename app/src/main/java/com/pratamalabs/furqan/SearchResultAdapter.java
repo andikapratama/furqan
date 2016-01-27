@@ -29,15 +29,17 @@ public class SearchResultAdapter extends BaseAdapter {
     Activity context;
     String query;
     Pattern pattern;
+    FurqanSettings settings;
 
     FurqanDao dao;
 
-    public SearchResultAdapter(Activity context, List<SearchResult> results, String query, FurqanDao dao) {
+    public SearchResultAdapter(Activity context, List<SearchResult> results, String query, FurqanDao dao, FurqanSettings settings) {
         this.context = context;
         this.results = results;
         this.query = query;
         this.dao = dao;
         pattern = Pattern.compile("(?i)" + query);
+        this.settings = settings;
     }
 
     @Override
@@ -68,7 +70,7 @@ public class SearchResultAdapter extends BaseAdapter {
         SearchResult item = getItem(i);
 
         ViewHolder holder = (ViewHolder) rowView.getTag();
-        holder.surahTitle.setText(dao.getAllSurah().get(item.getSurahNo()).getName() + " " + String.valueOf(item.getNumber()) + " - " + item.getTranslationName());
+        holder.surahTitle.setText(dao.getAllSurah().get(item.getSurahNo() - 1).getName() + " " + String.valueOf(item.getNumber()) + " - " + item.getTranslationName());
         String text = item.getText();
         Matcher matcher = pattern.matcher(text);
         List<String> replacement = new ArrayList();
@@ -84,6 +86,8 @@ public class SearchResultAdapter extends BaseAdapter {
         }
 
         holder.verseTitle.setText(Html.fromHtml(text));
+        holder.surahTitle.setTextSize(settings.getTextSize() + 2);
+        holder.verseTitle.setTextSize(settings.getTextSize());
         return rowView;
     }
 

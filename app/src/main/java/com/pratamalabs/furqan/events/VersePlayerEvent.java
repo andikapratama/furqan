@@ -11,5 +11,5 @@ public class VersePlayerEvent {
         this.type = type;
     }
 
-    public enum Type {Play, Stop, Error}
+    public enum Type {Play, Stop, Error, Finished}
 }

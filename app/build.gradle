@@ -1,13 +1,14 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven { url 'http://download.crashlytics.com/maven' }
+        maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
-        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
+        classpath 'com.android.tools.build:gradle:1.5.0'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4+'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
 //        classpath 'me.tatarka:gradle-retrolambda:2.4.1'
+        classpath 'io.fabric.tools:gradle:1.+'
     }
 }
 
@@ -17,13 +18,14 @@ allprojects {
     }
 }
 apply plugin: 'com.android.application'
-apply plugin: 'crashlytics'
+apply plugin: 'io.fabric'
 
 apply plugin: 'android-apt'
 def AAVersion = '3.2'
+apply plugin: 'me.tatarka.retrolambda'
 
 repositories {
-    maven { url 'http://download.crashlytics.com/maven' }
+    maven { url 'https://maven.fabric.io/public' }
 //    apply plugin: 'retrolambda'
 }
 
@@ -31,18 +33,18 @@ repositories {
 dependencies {
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
-    //    compile 'org.roboguice:roboguice:3.+'
-    //    provided 'org.roboguice:roboblender:3.+'
-    compile 'com.android.support:appcompat-v7:22.1.1'
-    compile 'com.android.support:support-v13:22.1.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:support-v13:23.1.1'
     compile 'com.squareup:otto:1.3.4'
     compile 'com.jakewharton:butterknife:5.1.2'
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
-    compile 'com.crashlytics.android:crashlytics:1.+'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true
+    }
     compile 'org.apache.commons:commons-lang3:3.3.2'
     compile 'commons-io:commons-io:2.4'
-    compile 'com.koushikdutta.ion:ion:1.+'
-    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.google.code.gson:gson:2.4'
     //    compile 'io.reactivex:rxandroid:0.22.0'
 }
 
@@ -62,8 +64,8 @@ apt {
 }
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
 
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
@@ -72,7 +74,7 @@ android {
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 22
+        targetSdkVersion 23
     }
 
     signingConfigs {

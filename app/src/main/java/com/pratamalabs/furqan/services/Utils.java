@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import com.pratamalabs.furqan.FurqanApp;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -101,6 +103,31 @@ public class Utils {
         }
 
         return ret;
+    }
+
+    static public String getVerseRecitationUrl(String reciter, int SurahNo, int verseNo) {
+
+        File folder = new File(FurqanApp.instance.getExternalFilesDir(null), "/" + reciter);
+        final File verse = new File(folder, String.format("%s%s.mp3", Utils.leadingZeros(SurahNo), Utils.leadingZeros(verseNo)));
+
+        if (verse.exists()) {
+            return verse.getAbsolutePath();
+        }
+
+        return String.format("http://www.everyayah.com/data/%s/%s%s.mp3",
+                reciter,
+                Utils.leadingZeros(SurahNo),
+                Utils.leadingZeros(verseNo));
+    }
+
+    static public String leadingZeros(int number) {
+        if (number < 10) {
+            return String.format("00%d", number);
+        } else if (number < 100) {
+            return String.format("0%d", number);
+        } else {
+            return String.valueOf(number);
+        }
     }
 
     static public boolean isLandscape(Context context) {

@@ -25,11 +25,22 @@
         android:singleLine="true"
         android:title="@string/pref_title_sources_size" />
 
+    <PreferenceCategory android:title="Recitations" />
     <Preference
         android:defaultValue=""
         android:key="recitationName"
         android:positiveButtonText="Ok"
         android:title="Reciter" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="recitationAutoPlay"
+        android:summary="Recitation should automatically play when the verse is opened"
+        android:title="Auto Play" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="recitationAutoContinue"
+        android:summary="Recitation should automatically continue to the next verse"
+        android:title="Auto Continue" />
 
     <PreferenceCategory android:title="Backup" />
     <Preference

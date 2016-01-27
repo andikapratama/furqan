@@ -16,7 +16,11 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.pratamalabs.furqan.services.TranslationsService;
@@ -42,6 +46,7 @@ import java.util.List;
 public class SettingsActivity extends PreferenceActivity {
     private static final int PICKFILE_RESULT_CODE = 3;
     private static final boolean ALWAYS_SIMPLE_PREFS = true;
+
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
@@ -152,6 +157,16 @@ public class SettingsActivity extends PreferenceActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
 
+
+        LinearLayout root = (LinearLayout) findViewById(android.R.id.list).getParent().getParent().getParent();
+        Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.setting_toolbar, root, false);
+        root.addView(bar, 0); // insert at top
+        bar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         setupSimplePreferencesScreen();
     }
 

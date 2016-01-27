@@ -37,6 +37,9 @@ public class SearchResultActivity extends ActionBarActivity {
     @Bean
     FurqanDao dao;
 
+    @Bean
+    FurqanSettings settings;
+
     @ViewById(R.id.search_list)
     ListView list;
 
@@ -125,7 +128,7 @@ public class SearchResultActivity extends ActionBarActivity {
                     String[] emptyList = new String[]{"No result found."};
                     list.setAdapter(new ArrayAdapter<String>(SearchResultActivity.this, android.R.layout.simple_list_item_1, emptyList));
                 } else {
-                    list.setAdapter(new SearchResultAdapter(SearchResultActivity.this, results, query, dao));
+                    list.setAdapter(new SearchResultAdapter(SearchResultActivity.this, results, query, dao, settings));
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                         list.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                     }

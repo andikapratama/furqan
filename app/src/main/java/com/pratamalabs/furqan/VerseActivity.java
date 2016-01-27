@@ -5,13 +5,15 @@ import android.app.FragmentTransaction;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -29,22 +31,16 @@ import com.pratamalabs.furqan.services.VersePlayerFragment;
 import com.pratamalabs.furqan.services.VersePlayerFragment_;
 import com.squareup.otto.Subscribe;
 
+import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 
-@EActivity
-public class VerseActivity extends ActionBarActivity implements ActionBar.TabListener {
+@EActivity(R.layout.activity_main)
+public class VerseActivity extends AppCompatActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
     public static final String SURAH_NUMBER = "surah_number";
     public static final String VERSE_NUMBER = "verse_number";
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which
-     * will keep every loaded fragment in memory. If this becomes too memory
-     * intensive, it may be best to switch to a
-     * {@link FragmentStatePagerAdapter}.
-     */
+
     SectionsPagerAdapter mSectionsPagerAdapter;
     Surah mSurah;
 
@@ -58,13 +54,42 @@ public class VerseActivity extends ActionBarActivity implements ActionBar.TabLis
 
     VersePlayerFragment player;
 
+    SharedPreferences preference;
+
     ViewPager mViewPager;
-    private int currentColor = 0xFF666666;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+        if (bus == null) return;
+        settings.setGlobalLastRead(mSurah.getNo(), position + 1);
+        settings.setSurahLastRead(mSurah.getNo(), position + 1);
+
+        boolean autoPlay = preference.getBoolean("recitationAutoPlay", false);
+        boolean autoPlayOneTime = preference.getBoolean("recitationAutoContinueOneTimePlay", false);
+        if (autoPlay || autoPlayOneTime) {
+            startCurrentRecitation();
+            if (autoPlayOneTime) {
+                preference.edit().remove("recitationAutoContinueOneTimePlay").apply();
+            }
+        }
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+
+    @AfterViews
+    public void init() {
+
+        preference = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
         int themeColor = getResources().getColor(android.R.color.holo_blue_dark);
 
         int surahNo = getIntent().getExtras().getInt(SURAH_NUMBER, 1);
@@ -96,6 +121,7 @@ public class VerseActivity extends ActionBarActivity implements ActionBar.TabLis
 
         final int pageMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources()
                 .getDisplayMetrics());
+        mViewPager.addOnPageChangeListener(this);
         mViewPager.setPageMargin(pageMargin);
         mViewPager.setCurrentItem(verseNo);
 
@@ -106,6 +132,7 @@ public class VerseActivity extends ActionBarActivity implements ActionBar.TabLis
 
         settings.refreshTranslations();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -152,6 +179,14 @@ public class VerseActivity extends ActionBarActivity implements ActionBar.TabLis
         if (event.type == VersePlayerEvent.Type.Error) {
             Toast.makeText(this, "Error streaming the recitation. Check your connection and try again", Toast.LENGTH_LONG).show();
         }
+
+        if (event.type == VersePlayerEvent.Type.Finished) {
+            boolean recitationAutoContinue = preference.getBoolean("recitationAutoContinue", false);
+            if (recitationAutoContinue && mViewPager.getCurrentItem() < (mViewPager.getAdapter().getCount() - 1)) {
+                preference.edit().putBoolean("recitationAutoContinueOneTimePlay", true).apply();
+                mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
+            }
+        }
         invalidateOptionsMenu();
     }
 
@@ -165,6 +200,10 @@ public class VerseActivity extends ActionBarActivity implements ActionBar.TabLis
     protected void onStop() {
         bus.unregister(this);
         super.onStop();
+    }
+
+    public void startCurrentRecitation() {
+        player.playRecitation(this, mSurah.getNo(), mViewPager.getCurrentItem() + 1);
     }
 
     @Override
@@ -182,7 +221,12 @@ public class VerseActivity extends ActionBarActivity implements ActionBar.TabLis
                 dialog.show(getSupportFragmentManager(), "goto");
                 return true;
             case R.id.action_play:
-                player.playRecitation(this, mSurah.getNo(), mViewPager.getCurrentItem() + 1);
+                startCurrentRecitation();
+                return true;
+            case R.id.action_recitation_cache:
+
+                intent = new Intent(this, RecitationSetting.class);
+                startActivityForResult(intent, 0);
                 return true;
             case R.id.action_stop:
                 player.stopRecitation();

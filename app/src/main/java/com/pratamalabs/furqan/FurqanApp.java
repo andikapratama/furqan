@@ -10,9 +10,12 @@ import java.lang.reflect.Field;
  */
 public class FurqanApp extends Application {
 
+    public static FurqanApp instance;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
 
         //hack to always show menu overflow
         try {

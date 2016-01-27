@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <ImageButton
+        android:id="@+id/download_pause_button"
+        android:layout_width="48dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="48dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_action_download" />
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="48dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/content_discard" />
+
+    <TextView
+        android:id="@+id/recitation_name"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/download_pause_button"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:text="Sample recitation"
+        android:textAppearance="?android:attr/textAppearanceListItem" />
+
+    <TextView
+        android:id="@+id/recitation_status"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/download_pause_button"
+        android:text="Not downloaded, streaming only"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+</RelativeLayout>

@@ -70,8 +70,6 @@ public class VerseFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        settings.setGlobalLastRead(surahNo, verseNo);
-        settings.setSurahLastRead(surahNo, verseNo);
         if(adapter!=null){
             adapter.notifyDataSetChanged();
         }

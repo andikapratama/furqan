@@ -11,6 +11,7 @@ import com.pratamalabs.furqan.FurqanSettings;
 import com.pratamalabs.furqan.events.VersePlayerEvent;
 import com.pratamalabs.furqan.models.Recitation;
 
+import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EFragment;
 
@@ -31,20 +32,15 @@ public class VersePlayerFragment extends Fragment {
     MediaPlayer mediaPlayer;
     WifiManager.WifiLock wifiLock;
     boolean isPlaying;
-
-    private String leadingZeros(int number) {
-        if (number < 10) {
-            return String.format("00%d", number);
-        } else if (number < 100) {
-            return String.format("0%d", number);
-        } else {
-            return String.valueOf(number);
-        }
-    }
+    int pendingSurahNo = 0;
+    int pendingVerseNo = 0;
 
     public synchronized void stopRecitation() {
+        stopRecitation(false);
+    }
+
+    public synchronized void stopRecitation(boolean finished) {
         isPlaying = false;
-        bus.post(new VersePlayerEvent(VersePlayerEvent.Type.Stop));
         if (mediaPlayer == null)
             return;
 
@@ -53,6 +49,12 @@ public class VersePlayerFragment extends Fragment {
 
         if (wifiLock.isHeld()) {
             wifiLock.release();
+        }
+
+        if (finished) {
+            bus.post(new VersePlayerEvent(VersePlayerEvent.Type.Finished));
+        } else {
+            bus.post(new VersePlayerEvent(VersePlayerEvent.Type.Stop));
         }
     }
 
@@ -92,7 +94,19 @@ public class VersePlayerFragment extends Fragment {
         return isPlaying;
     }
 
+    @AfterInject
+    public void afterInject() {
+        if (pendingVerseNo > 0) {
+            playRecitation(getActivity(), pendingSurahNo, pendingVerseNo);
+        }
+    }
+
     public synchronized void playRecitation(Context context, int SurahNo, int verseNo) {
+        if (bus == null) {
+            pendingSurahNo = SurahNo;
+            pendingVerseNo = verseNo;
+            return;
+        }
         if (mediaPlayer != null) {
             stopRecitation();
         } else {
@@ -104,10 +118,7 @@ public class VersePlayerFragment extends Fragment {
         try {
             Recitation selectedRecitations = settings.getSelectedRecitation();
             wifiLock.acquire();
-            mediaPlayer.setDataSource(String.format("http://www.everyayah.com/data/%s/%s%s.mp3",
-                    selectedRecitations.subfolder,
-                    leadingZeros(SurahNo),
-                    leadingZeros(verseNo)));
+            mediaPlayer.setDataSource(Utils.getVerseRecitationUrl(selectedRecitations.subfolder, SurahNo, verseNo));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -121,7 +132,7 @@ public class VersePlayerFragment extends Fragment {
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
-                stopRecitation();
+                stopRecitation(true);
             }
         });
         mediaPlayer.prepareAsync();
