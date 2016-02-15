@@ -28,7 +28,7 @@ import java.io.OutputStream;
 public class FurqanDatabase extends SQLiteOpenHelper {
 
     public final static String DATABASE_PATH = "/data/data/com.pratamalabs.furqan/databases/";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static String DATABASE_NAME = "furqan.sqlite";
     private static String DATABASE_VERSION_TAG = "dbversion.txt";
     private final Context dbContext;
@@ -60,6 +60,25 @@ public class FurqanDatabase extends SQLiteOpenHelper {
     void upgrade1DbLink(SQLiteDatabase sqLiteDatabase) {
         String update1 = "UPDATE Sources SET DownloadLink = replace( DownloadLink, 'http://andikapratama.com/data/', 'https://raw.githubusercontent.com/andikapratama/furqan/master/app/QuranData/ExtraTranslations/' ), UpdateLink = replace( UpdateLink, 'http://andikapratama.com/data/', 'https://raw.githubusercontent.com/andikapratama/furqan/master/app/QuranData/ExtraTranslations/' ) WHERE Id IN (45,108,109,110)";
         sqLiteDatabase.execSQL(update1);
+    }
+
+    void addedIndonesianTransliteration(SQLiteDatabase sqLiteDatabase) {
+        String update1 = "INSERT INTO Sources (Id,Type,Name,Author,DownloadLink,UpdateLink,LastModifiedDate,Language,ProviderName,Status,Ordering,TanzilId) " +
+                "VALUES (111,?,?,?,?,?,?,?,?,?,111,?)";
+
+
+        sqLiteDatabase.execSQL(update1, new Object[]{
+                "Translation",
+                "Transliterasi Indonesia",
+                "Unknown",
+                "http://andikapratama.com/data/transliterasiIndonesia.txt",
+                "http://andikapratama.com/data/transliterasiIndonesia.txt",
+                "2016-2-15",
+                "Indonesian",
+                "Unknown",
+                "notdownloaded",
+                "pratama.id.transliterasi"
+        });
     }
 
     private void setDbVersion() throws IOException {
@@ -114,6 +133,9 @@ public class FurqanDatabase extends SQLiteOpenHelper {
         if (dbLocalVersion < DATABASE_VERSION) {
             if (dbLocalVersion == 1) {
                 upgrade1DbLink(sqLiteDatabase);
+            }
+            if (dbLocalVersion < 3) {
+                addedIndonesianTransliteration(sqLiteDatabase);
             }
             try {
                 setDbVersion();
