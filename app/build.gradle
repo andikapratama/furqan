@@ -2,11 +2,16 @@ buildscript {
     repositories {
         mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
+//        google()
+        maven { url 'https://maven.google.com' }
+        maven { url 'http://download.crashlytics.com/maven' }
+        maven { url "https://plugins.gradle.org/m2/" }
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4+'
-        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+        classpath 'com.android.tools.build:gradle:3.1.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8+'
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
 //        classpath 'me.tatarka:gradle-retrolambda:2.4.1'
         classpath 'io.fabric.tools:gradle:1.+'
     }
@@ -20,52 +25,37 @@ allprojects {
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 
-apply plugin: 'android-apt'
 def AAVersion = '3.2'
 apply plugin: 'me.tatarka.retrolambda'
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
 //    apply plugin: 'retrolambda'
+    google()
 }
 
 
 dependencies {
-    apt "org.androidannotations:androidannotations:$AAVersion"
-    compile "org.androidannotations:androidannotations-api:$AAVersion"
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:support-v13:23.1.1'
-    compile 'com.squareup:otto:1.3.4'
-    compile 'com.jakewharton:butterknife:5.1.2'
-    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v13:27.1.1'
+    implementation 'com.squareup:otto:1.3.4'
+    implementation 'com.jakewharton:butterknife:5.1.2'
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
         transitive = true
     }
-    compile 'org.apache.commons:commons-lang3:3.3.2'
-    compile 'commons-io:commons-io:2.4'
-    compile 'com.koushikdutta.ion:ion:2.+'
-    compile 'com.google.code.gson:gson:2.4'
+    implementation 'org.apache.commons:commons-lang3:3.3.2'
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'com.koushikdutta.ion:ion:2.+'
+    implementation 'com.google.code.gson:gson:2.4'
     //    compile 'io.reactivex:rxandroid:0.22.0'
 }
 
-apt {
-    arguments {
-        androidManifestFile variant.outputs[0].processResources.manifestFile
-//        androidManifestFile variant.processResources.manifestFile
-        resourcePackageName 'com.pratamalabs.furqan'
-
-        // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
-//        resourcePackageName android.defaultConfig.packageName
-
-        // You can set optional annotation processing options here, like these commented options:
-        // logLevel 'INFO'
-        // logFile '/var/log/aa.log'
-    }
-}
-
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
@@ -73,8 +63,8 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 23
+        minSdkVersion 21
+        targetSdkVersion 27
     }
 
     signingConfigs {
@@ -93,7 +83,6 @@ android {
         }
         release {
             debuggable false
-            shrinkResources true
             signingConfig signingConfigs.release
 //            runProguard true
 //            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
@@ -104,3 +93,4 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 }
+android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true

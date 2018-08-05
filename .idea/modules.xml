@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FurqanA.iml" filepath="$PROJECT_DIR$/FurqanA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/batcave/batcave.iml" filepath="$PROJECT_DIR$/batcave/batcave.iml" />
+      <module fileurl="file://$PROJECT_DIR$/furqan2.iml" filepath="$PROJECT_DIR$/furqan2.iml" />
     </modules>
   </component>
 </project>
