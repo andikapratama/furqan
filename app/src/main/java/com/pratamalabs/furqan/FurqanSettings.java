@@ -1,5 +1,8 @@
 package com.pratamalabs.furqan;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -9,8 +12,6 @@ import android.graphics.Typeface;
 import android.preference.PreferenceManager;
 import android.util.Pair;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.koushikdutta.async.future.FutureCallback;
 import com.pratamalabs.furqan.events.RecitationsFinishedLoadingEvent;
 import com.pratamalabs.furqan.models.Recitation;
@@ -43,6 +44,11 @@ public class FurqanSettings {
     public static final String ARABIC_TYPEFACE = "arabic_typeface";
     public static final String TEXT_SIZE = "text_size";
     public static final String ARABIC_SIZE = "arabic_size";
+
+    public static FurqanSettings get() {
+        return FurqanSettings_.getInstance_(FurqanApp.instance);
+    }
+
     @Bean
     FurqanDao dao;
 

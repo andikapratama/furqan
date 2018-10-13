@@ -2,17 +2,12 @@ buildscript {
     repositories {
         mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
-//        google()
-        maven { url 'https://maven.google.com' }
         maven { url 'http://download.crashlytics.com/maven' }
         maven { url "https://plugins.gradle.org/m2/" }
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.3'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8+'
-        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
-//        classpath 'me.tatarka:gradle-retrolambda:2.4.1'
+        classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'io.fabric.tools:gradle:1.+'
     }
 }
@@ -22,40 +17,52 @@ allprojects {
         mavenCentral()
     }
 }
+
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'io.fabric'
 
-def AAVersion = '3.2'
-apply plugin: 'me.tatarka.retrolambda'
+def AAVersion = '4.4.0'
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
-//    apply plugin: 'retrolambda'
     google()
+    mavenCentral()
 }
 
+kapt {
+    arguments {
+        arg("androidManifestFile", "/Users/andikapratama/AndroidStudioProjects/furqan2/app/build/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml")
+    }
+}
 
 dependencies {
-    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    kapt "org.androidannotations:androidannotations:$AAVersion"
     implementation "org.androidannotations:androidannotations-api:$AAVersion"
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:support-v13:27.1.1'
     implementation 'com.squareup:otto:1.3.4'
     implementation 'com.jakewharton:butterknife:5.1.2'
+    kapt 'com.jakewharton:butterknife:5.1.2'
     implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
-    implementation('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
         transitive = true
     }
+
+    implementation "org.jetbrains.anko:anko-coroutines:$anko_version"
     implementation 'org.apache.commons:commons-lang3:3.3.2'
     implementation 'commons-io:commons-io:2.4'
     implementation 'com.koushikdutta.ion:ion:2.+'
-    implementation 'com.google.code.gson:gson:2.4'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //    compile 'io.reactivex:rxandroid:0.22.0'
 }
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
@@ -64,7 +71,13 @@ android {
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 28
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
     }
 
     signingConfigs {
@@ -89,8 +102,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
+//android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true

@@ -14,7 +14,6 @@ import com.pratamalabs.furqan.models.Surah;
 import com.pratamalabs.furqan.repository.FurqanDao;
 
 import org.androidannotations.annotations.Background;
-import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 import org.apache.commons.io.FileUtils;
 
@@ -32,9 +31,7 @@ import java.util.List;
 @EBean(scope = EBean.Scope.Singleton)
 public class VerseRecitationService {
 
-    @Bean
-    FurqanDao dao;
-
+    FurqanDao dao = FurqanDao.get();
 
     @Background
     public void downloadFullRecitation(final Context context,

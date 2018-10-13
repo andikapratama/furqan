@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 
 import com.crashlytics.android.Crashlytics;
+import com.pratamalabs.furqan.FurqanApp;
 import com.pratamalabs.furqan.models.Note;
 import com.pratamalabs.furqan.models.SearchResult;
 import com.pratamalabs.furqan.models.Source;
@@ -14,7 +15,6 @@ import com.pratamalabs.furqan.models.TranslationData;
 import com.pratamalabs.furqan.models.Verse;
 
 import org.androidannotations.annotations.AfterInject;
-import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 import org.apache.commons.lang3.StringUtils;
 
@@ -32,8 +32,12 @@ public class FurqanDao {
 
     public SQLiteDatabase mDatabase;
 
-    @Bean
-    FurqanDatabase mSQLite;
+    FurqanDatabase mSQLite = FurqanDatabase.get();
+
+
+    public static FurqanDao get() {
+        return FurqanDao_.getInstance_(FurqanApp.instance);
+    }
 
     List<Surah> surahsCache;
 

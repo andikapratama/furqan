@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -31,11 +32,6 @@ import com.pratamalabs.furqan.services.VersePlayerFragment;
 import com.pratamalabs.furqan.services.VersePlayerFragment_;
 import com.squareup.otto.Subscribe;
 
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Bean;
-import org.androidannotations.annotations.EActivity;
-
-@EActivity(R.layout.activity_main)
 public class VerseActivity extends AppCompatActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
     public static final String SURAH_NUMBER = "surah_number";
@@ -44,19 +40,25 @@ public class VerseActivity extends AppCompatActivity implements ActionBar.TabLis
     SectionsPagerAdapter mSectionsPagerAdapter;
     Surah mSurah;
 
-    @Bean
-    FurqanDao dao;
-    @Bean
-    FurqanSettings settings;
+    FurqanDao dao = FurqanDao.get();
 
-    @Bean
-    EventBus bus;
+    FurqanSettings settings = FurqanSettings.get();
+
+    EventBus bus = EventBus.get();
 
     VersePlayerFragment player;
 
     SharedPreferences preference;
 
     ViewPager mViewPager;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+        init();
+    }
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -85,8 +87,6 @@ public class VerseActivity extends AppCompatActivity implements ActionBar.TabLis
 
     }
 
-
-    @AfterViews
     public void init() {
 
         preference = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
@@ -166,7 +166,7 @@ public class VerseActivity extends AppCompatActivity implements ActionBar.TabLis
         if (mSurah.getNo() == event.surahNo) {
             mViewPager.setCurrentItem(event.verseNo - 1);
         } else {
-            Intent intent = new Intent(this, VerseActivity_.class);
+            Intent intent = new Intent(this, VerseActivity.class);
             intent.putExtra(VerseActivity.SURAH_NUMBER, event.surahNo);
             intent.putExtra(VerseActivity.VERSE_NUMBER, event.verseNo);
             startActivity(intent);
@@ -213,11 +213,11 @@ public class VerseActivity extends AppCompatActivity implements ActionBar.TabLis
         switch (item.getItemId()) {
             case R.id.action_settings:
 
-                intent = new Intent(this, SettingsActivity_.class);
+                intent = new Intent(this, SettingsActivity.class);
                 startActivityForResult(intent, 0);
                 return true;
             case R.id.action_goto:
-                GoToDialog dialog = GoToDialog.newInstance(mSurah.getNo(), mViewPager.getCurrentItem() + 1);
+                GoToDialog dialog = GoToDialog.Companion.newInstance(mSurah.getNo(), mViewPager.getCurrentItem() + 1);
                 dialog.show(getSupportFragmentManager(), "goto");
                 return true;
             case R.id.action_play:
@@ -272,7 +272,7 @@ public class VerseActivity extends AppCompatActivity implements ActionBar.TabLis
             // getItem is called to instantiate the fragment for the given page.
             // Return a VerseFragment (defined as a static inner class
             // below) with the page number as its lone argument.
-            Fragment fragment = new VerseFragment_();
+            Fragment fragment = new VerseFragment();
             Bundle args = new Bundle();
             args.putInt(Constants.SURAH_NUMBER, mSurah.getNo());
             args.putInt(Constants.VERSE_NUMBER, position + 1);

@@ -2,12 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pratamalabs.furqan"
     android:installLocation="auto"
-    android:versionCode="18"
-    android:versionName="1.8">
-
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="20" />
+    android:versionCode="19"
+    android:versionName="1.9">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -25,14 +21,14 @@
         android:largeHeap="true"
         android:theme="@style/FurqanTheme">
         <activity
-            android:name=".StartActivity_"
+            android:name=".StartActivity"
             android:label="@string/title_activity_start"
             android:logo="@drawable/quran_white"
             android:theme="@style/FurqanTheme"
             android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.app.default_searchable"
-                android:value=".SearchResultActivity_" />
+                android:value=".SearchResultActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,21 +48,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".VerseActivity_"
+            android:name=".VerseActivity"
             android:label="@string/app_name"
             android:logo="@drawable/quran_white"
-            android:parentActivityName=".StartActivity_"
+            android:parentActivityName=".StartActivity"
             android:theme="@style/FurqanTheme.CardBackground"
             android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.app.default_searchable"
-                android:value=".SearchResultActivity_" />
+                android:value=".SearchResultActivity" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StartActivity_" />
+                android:value=".StartActivity" />
         </activity>
         <activity
-            android:name=".SearchResultActivity_"
+            android:name=".SearchResultActivity"
             android:icon="@drawable/quran_white"
             android:label="@string/app_name">
             <intent-filter>
@@ -75,19 +71,19 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StartActivity_" />
+                android:value=".StartActivity" />
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".SettingsActivity_"
+            android:name=".SettingsActivity"
             android:label="@string/app_name"
             android:logo="@drawable/quran_white"
-            android:parentActivityName=".StartActivity_">
+            android:parentActivityName=".StartActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StartActivity_" />
+                android:value=".StartActivity" />
         </activity>
 
         <meta-data
@@ -97,11 +93,11 @@
         <activity
             android:name=".RecitationSetting"
             android:label="@string/title_activity_recitation_setting"
-            android:parentActivityName=".StartActivity_"
+            android:parentActivityName=".StartActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.pratamalabs.furqan.StartActivity_" />
+                android:value="com.pratamalabs.furqan.StartActivity" />
         </activity>
     </application>
 

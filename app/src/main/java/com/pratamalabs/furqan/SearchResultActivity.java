@@ -7,7 +7,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,27 +20,18 @@ import android.widget.ListView;
 import com.pratamalabs.furqan.models.SearchResult;
 import com.pratamalabs.furqan.repository.FurqanDao;
 
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Bean;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by pratamalabs on 1/10/13.
  */
-@EActivity(R.layout.plain_list)
-public class SearchResultActivity extends ActionBarActivity {
+public class SearchResultActivity extends AppCompatActivity {
 
-    @Bean
-    FurqanDao dao;
+    FurqanDao dao = FurqanDao.get();
 
-    @Bean
-    FurqanSettings settings;
+    FurqanSettings settings = FurqanSettings.get();
 
-    @ViewById(R.id.search_list)
     ListView list;
 
     List<SearchResult> results = new ArrayList();
@@ -50,11 +41,12 @@ public class SearchResultActivity extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        init();
     }
 
-    @AfterViews
     void init(){
         handleIntent(getIntent());
+        ListView list = findViewById(R.id.search_list);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -62,7 +54,7 @@ public class SearchResultActivity extends ActionBarActivity {
 
                 if (results.size() > i) {
                     SearchResult sr = results.get(i);
-                    Intent intent = new Intent(SearchResultActivity.this, VerseActivity_.class);
+                    Intent intent = new Intent(SearchResultActivity.this, VerseActivity.class);
                     intent.putExtra(VerseActivity.SURAH_NUMBER, sr.getSurahNo());
                     intent.putExtra(VerseActivity.VERSE_NUMBER, sr.getNumber());
                     startActivity(intent);

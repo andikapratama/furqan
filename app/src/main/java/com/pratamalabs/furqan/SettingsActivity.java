@@ -25,9 +25,6 @@ import android.widget.Toast;
 
 import com.pratamalabs.furqan.services.TranslationsService;
 
-import org.androidannotations.annotations.Bean;
-import org.androidannotations.annotations.EActivity;
-
 import java.util.List;
 
 /**
@@ -42,7 +39,6 @@ import java.util.List;
  * API Guide</a> for more information on developing a Settings UI.
  */
 
-@EActivity
 public class SettingsActivity extends PreferenceActivity {
     private static final int PICKFILE_RESULT_CODE = 3;
     private static final boolean ALWAYS_SIMPLE_PREFS = true;
@@ -105,10 +101,10 @@ public class SettingsActivity extends PreferenceActivity {
      * shown on tablets.
      */
 
-    @Bean
-    FurqanSettings settings;
-    @Bean
-    TranslationsService service;
+
+    FurqanSettings settings = FurqanSettings.get();
+
+    TranslationsService service = TranslationsService.get();
 
     /**
      * Helper method to determine if the device has an extra-large screen. For

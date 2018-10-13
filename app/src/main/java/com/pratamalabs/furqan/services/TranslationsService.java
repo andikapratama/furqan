@@ -1,13 +1,15 @@
 package com.pratamalabs.furqan.services;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.pratamalabs.furqan.FurqanApp;
 import com.pratamalabs.furqan.models.Note;
 import com.pratamalabs.furqan.models.TranslationData;
 import com.pratamalabs.furqan.repository.FurqanDao;
@@ -34,6 +36,11 @@ public class TranslationsService {
 
     @Bean
     FurqanDao dao;
+
+
+    public static TranslationsService get() {
+        return TranslationsService_.getInstance_(FurqanApp.instance);
+    }
 
     public boolean backupNotesToExternalDevice() {
         List<Note> notes = dao.getNotes();

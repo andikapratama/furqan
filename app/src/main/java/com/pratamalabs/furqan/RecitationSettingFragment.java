@@ -38,11 +38,9 @@ public class RecitationSettingFragment extends Fragment {
     @ViewById(R.id.recitationListView)
     ListView recitationListView;
 
-    @Bean
-    FurqanSettings settings;
+    FurqanSettings settings = FurqanSettings.get();
 
-    @Bean
-    EventBus eventBus;
+    EventBus eventBus = EventBus.get();
 
     @Bean
     VerseRecitationService recitationService;

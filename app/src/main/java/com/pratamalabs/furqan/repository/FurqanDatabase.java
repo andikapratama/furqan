@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.pratamalabs.furqan.FurqanApp;
 import com.pratamalabs.furqan.FurqanSettings;
 
 import org.androidannotations.annotations.Bean;
@@ -33,9 +34,13 @@ public class FurqanDatabase extends SQLiteOpenHelper {
     private static String DATABASE_VERSION_TAG = "dbversion.txt";
     private final Context dbContext;
 
-    @Bean
-    FurqanSettings settings;
+    FurqanSettings settings = FurqanSettings.get();
     private SQLiteDatabase dataBase;
+
+
+    public static FurqanDatabase get() {
+        return FurqanDatabase_.getInstance_(FurqanApp.instance);
+    }
 
     public FurqanDatabase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
