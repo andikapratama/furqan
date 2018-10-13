@@ -104,7 +104,7 @@ public class SettingsActivity extends PreferenceActivity {
 
     FurqanSettings settings = FurqanSettings.get();
 
-    TranslationsService service = TranslationsService.get();
+    TranslationsService service = TranslationsService.INSTANCE;
 
     /**
      * Helper method to determine if the device has an extra-large screen. For

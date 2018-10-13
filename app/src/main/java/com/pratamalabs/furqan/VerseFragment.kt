@@ -37,7 +37,7 @@ class VerseFragment : Fragment() {
 
     internal var dao = FurqanDao.get()
     internal var settings = FurqanSettings.get()
-    internal var bus = EventBus.get()
+    internal var bus = EventBus
 
     internal val preference: SharedPreferences by lazy {
         PreferenceManager.getDefaultSharedPreferences(activity!!.applicationContext)

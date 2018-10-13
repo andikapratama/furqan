@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 import com.koushikdutta.ion.ProgressCallback;
+import com.pratamalabs.furqan.FurqanApp;
 import com.pratamalabs.furqan.Utilities;
 import com.pratamalabs.furqan.models.Recitation;
 import com.pratamalabs.furqan.models.Surah;
@@ -32,6 +33,11 @@ import java.util.List;
 public class VerseRecitationService {
 
     FurqanDao dao = FurqanDao.get();
+
+
+    public static VerseRecitationService get() {
+        return VerseRecitationService_.getInstance_(FurqanApp.instance);
+    }
 
     @Background
     public void downloadFullRecitation(final Context context,

@@ -22,9 +22,7 @@ import com.pratamalabs.furqan.services.Utils;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.Background;
-import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
-import org.androidannotations.annotations.RootContext;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,14 +47,11 @@ public class FurqanSettings {
         return FurqanSettings_.getInstance_(FurqanApp.instance);
     }
 
-    @Bean
-    FurqanDao dao;
+    FurqanDao dao = FurqanDao.get();
 
-    @Bean
-    EventBus eventBus;
+    EventBus eventBus = EventBus.INSTANCE;
 
-    @RootContext
-    Context context;
+    Context context = FurqanApp.instance;
     String typefaceKeyCache;
     //    private Map<String, Typeface> typefaceChoice;
     Typeface typeface;

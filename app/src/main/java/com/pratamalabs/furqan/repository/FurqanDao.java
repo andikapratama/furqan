@@ -32,7 +32,6 @@ public class FurqanDao {
 
     public SQLiteDatabase mDatabase;
 
-    FurqanDatabase mSQLite = FurqanDatabase.get();
 
 
     public static FurqanDao get() {
@@ -43,6 +42,7 @@ public class FurqanDao {
 
     @AfterInject
     public void init() {
+        FurqanDatabase mSQLite = FurqanDatabase.Companion.get();
         mDatabase = mSQLite.getWritableDatabase();
     }
 

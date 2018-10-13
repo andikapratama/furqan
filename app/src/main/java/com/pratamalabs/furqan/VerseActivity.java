@@ -29,7 +29,6 @@ import com.pratamalabs.furqan.models.Surah;
 import com.pratamalabs.furqan.repository.FurqanDao;
 import com.pratamalabs.furqan.services.EventBus;
 import com.pratamalabs.furqan.services.VersePlayerFragment;
-import com.pratamalabs.furqan.services.VersePlayerFragment_;
 import com.squareup.otto.Subscribe;
 
 public class VerseActivity extends AppCompatActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
@@ -44,7 +43,7 @@ public class VerseActivity extends AppCompatActivity implements ActionBar.TabLis
 
     FurqanSettings settings = FurqanSettings.get();
 
-    EventBus bus = EventBus.get();
+    EventBus bus = EventBus.INSTANCE;
 
     VersePlayerFragment player;
 
@@ -101,7 +100,7 @@ public class VerseActivity extends AppCompatActivity implements ActionBar.TabLis
 
         player = (VersePlayerFragment) getSupportFragmentManager().findFragmentByTag("player");
         if (player == null) {
-            player = new VersePlayerFragment_();
+            player = new VersePlayerFragment();
             player.setRetainInstance(true);
             getSupportFragmentManager().beginTransaction().add(player, "player").commit();
         }

@@ -33,7 +33,7 @@ open class SurahFragment : ListFragment() {
     internal var settings = FurqanSettings.get()
 
 
-    internal var bus = EventBus.get()
+    internal var bus = EventBus
 
     internal lateinit var adapter: SurahListAdapter
 

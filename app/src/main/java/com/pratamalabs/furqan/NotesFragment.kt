@@ -15,6 +15,9 @@ import android.widget.ListView
 import com.pratamalabs.furqan.models.Note
 import com.pratamalabs.furqan.repository.FurqanDao
 import kotlinx.android.synthetic.main.list_filter.*
+import kotlinx.coroutines.experimental.android.UI
+import kotlinx.coroutines.experimental.async
+import org.jetbrains.anko.coroutines.experimental.bg
 import java.util.*
 
 /**
@@ -51,24 +54,22 @@ open class NotesFragment : ListFragment() {
         })
     }
 
-    //    @Background
     internal open fun loadNotes() {
-        val results = dao.notes
-        showNotes(results)
-    }
+        async(UI) {
+            val notes = bg { dao.notes}.await()
 
-    //    @UiThread
-    internal open fun showNotes(notes: List<Note>) {
-        if (notes.size == 0) {
-            val emptyList = arrayOf("You have no notes..")
-            listAdapter = ArrayAdapter(activity!!, android.R.layout.simple_list_item_1, emptyList)
-        } else {
-            listAdapter = NoteListAdapter(activity, notes, dao)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                listView.textAlignment = View.TEXT_ALIGNMENT_CENTER
+            if (notes.size == 0) {
+                val emptyList = arrayOf("You have no notes..")
+                listAdapter = ArrayAdapter(activity!!, android.R.layout.simple_list_item_1, emptyList)
+            } else {
+                listAdapter = NoteListAdapter(activity, notes, dao)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                    listView.textAlignment = View.TEXT_ALIGNMENT_CENTER
+                }
             }
         }
     }
+
 
     override fun onResume() {
         super.onResume()

@@ -23,7 +23,7 @@ open class GoToDialog : DialogFragment() {
 
     internal var dao = FurqanDao.get()
 
-    internal var bus = EventBus.get()
+    internal var bus = EventBus
 
     internal lateinit var mSurah: Surah
     internal lateinit var editTextVerse: EditText

@@ -39,9 +39,9 @@ open class SourcesFragment : ListFragment() {
 
     internal var dao = FurqanDao.get()
     internal var settings = FurqanSettings.get()
-    internal var service = TranslationsService.get()
+    internal var service = TranslationsService
 
-    internal var bus = EventBus.get()
+    internal var bus = EventBus
 
 
     internal var downloading: Future<File>? = null
