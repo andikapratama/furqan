@@ -102,7 +102,7 @@ public class SettingsActivity extends PreferenceActivity {
      */
 
 
-    FurqanSettings settings = FurqanSettings.get();
+    FurqanSettings settings = FurqanSettings.INSTANCE;
 
     TranslationsService service = TranslationsService.INSTANCE;
 

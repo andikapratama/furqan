@@ -25,6 +25,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.Optional;
 
+
 public class VerseListAdapter extends BaseAdapter {
 
     public static final int ARABIC = 0;

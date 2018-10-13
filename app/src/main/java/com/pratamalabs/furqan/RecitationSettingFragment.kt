@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Toast
+import com.koushikdutta.async.future.FutureCallback
 import com.pratamalabs.furqan.events.RecitationDeleteCache
 import com.pratamalabs.furqan.events.RecitationShouldStartDownloading
 import com.pratamalabs.furqan.services.EventBus
@@ -26,11 +27,11 @@ import kotlinx.coroutines.experimental.async
 
 open class RecitationSettingFragment : Fragment() {
 
-    internal var settings = FurqanSettings.get()
+    internal var settings = FurqanSettings
 
     internal var eventBus = EventBus
 
-    internal var recitationService = VerseRecitationService.get()
+    internal var recitationService = VerseRecitationService
 
     internal var adapter: RecitationListAdapter? = null
 
@@ -70,7 +71,7 @@ open class RecitationSettingFragment : Fragment() {
         pd.show()
 
 
-        recitationService.downloadFullRecitation(context, e.recitation, stopped, pd) { e, result ->
+        recitationService.downloadFullRecitation(context, e.recitation, stopped, pd, FutureCallback { e, result ->
             if (result!!) {
                 Toast.makeText(context, recitation.title + " downloaded Successfully", Toast.LENGTH_LONG).show()
             } else if (e != null) {
@@ -78,15 +79,15 @@ open class RecitationSettingFragment : Fragment() {
             } else {
                 Toast.makeText(context, recitation.title + " download paused", Toast.LENGTH_LONG).show()
             }
-            settings.refreshRecitation { e, result -> refreshList(pd) }
-        }
+            settings.refreshRecitation( FutureCallback { e, result -> refreshList(pd) })
+        })
     }
 
     open fun refreshList(pd: ProgressDialog) {
         async(UI) {
             pd.dismiss()
             activity!!.runOnUiThread {
-                adapter!!.recitations = settings.recitations
+                adapter!!.recitations = settings.getRecitations()
                 adapter!!.notifyDataSetChanged()
             }
         }
@@ -95,14 +96,17 @@ open class RecitationSettingFragment : Fragment() {
     @Subscribe
     fun onRecitationDelete(e: RecitationDeleteCache) {
 
-        if (this.activity == null) return
+        val activity = this.activity
+        if (activity == null) return
         AlertDialog.Builder(this.activity)
                 .setTitle("Confirm Delete")
                 .setMessage("Delete the recitation?")
                 .setNegativeButton("Cancel", null)
                 .setPositiveButton("Yes") { dialogInterface, i ->
                     val pd = ProgressDialog.show(activity, "", "Deleting..", true, false, null)
-                    recitationService.deleteFullRecitation(activity, e.recitation) { e, result -> settings.refreshRecitation { e, result -> refreshList(pd) } }
+                    recitationService.deleteFullRecitation(activity, e.recitation, FutureCallback { e, result ->  })
+                    recitationService.deleteFullRecitation(activity, e.recitation, FutureCallback { e, result ->
+                        settings.refreshRecitation(FutureCallback { e, result -> refreshList(pd) } )})
                 }
                 .show()
     }

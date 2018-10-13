@@ -35,8 +35,8 @@ import java.util.*
  */
 class VerseFragment : Fragment() {
 
-    internal var dao = FurqanDao.get()
-    internal var settings = FurqanSettings.get()
+    internal var dao = FurqanDao
+    internal var settings = FurqanSettings
     internal var bus = EventBus
 
     internal val preference: SharedPreferences by lazy {
@@ -81,8 +81,8 @@ class VerseFragment : Fragment() {
         async(UI) {
 
             val loadFirst = bg {
-                mverse = dao.getVerse(surahNo, verseNo, settings.selectedTranslations)
-                for (translation in settings.selectedTranslations) {
+                mverse = dao.getVerse(surahNo, verseNo, settings.getSelectedTranslations())
+                for (translation in settings.getSelectedTranslations()) {
                     keys.add(translation.tanzilId)
                 }
             }
@@ -148,7 +148,7 @@ class VerseFragment : Fragment() {
                     } else if (hasNote && names.size == which + 1) {
                         textToShare = String.format("'%s', Notes on %s %d:%d", mverse!!.note, dao.getSurahNo(surahNo).name, surahNo, verseNo)
                     } else {
-                        val translation = settings.selectedTranslations[which - 1]
+                        val translation = settings.getSelectedTranslations()[which - 1]
                         val text = Html.fromHtml(mverse!!.translations[translation]).toString()
                         textToShare = String.format("'%s', %s, on %s %d:%d", text, translation.translator, dao.getSurahNo(surahNo).name, surahNo, verseNo)
                     }

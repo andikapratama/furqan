@@ -25,7 +25,7 @@ import java.util.*
  */
 open class NotesFragment : ListFragment() {
 
-    internal var dao = FurqanDao.get()
+    internal var dao = FurqanDao
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.list_filter, container, false)

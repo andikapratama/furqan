@@ -39,7 +39,7 @@ class StartActivity : AppCompatActivity(), ActionBar.TabListener {
      * The [ViewPager] that will host the section contents.
      */
 
-    internal var settings = FurqanSettings.get()
+    internal var settings = FurqanSettings
 
     internal var service: TranslationsService? = null
 

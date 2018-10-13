@@ -20,7 +20,7 @@ import java.io.IOException
  */
 class FurqanDatabase(private val dbContext: Context) : SQLiteOpenHelper(dbContext, DATABASE_NAME, null, DATABASE_VERSION) {
 
-    internal var settings = FurqanSettings.get()
+    internal var settings = FurqanSettings
     private var dataBase: SQLiteDatabase? = null
 
     init {

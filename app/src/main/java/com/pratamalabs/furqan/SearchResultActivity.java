@@ -28,9 +28,9 @@ import java.util.List;
  */
 public class SearchResultActivity extends AppCompatActivity {
 
-    FurqanDao dao = FurqanDao.get();
+    FurqanDao dao = FurqanDao.INSTANCE;
 
-    FurqanSettings settings = FurqanSettings.get();
+    FurqanSettings settings = FurqanSettings.INSTANCE;
 
     ListView list;
 

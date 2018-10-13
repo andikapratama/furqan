@@ -21,7 +21,7 @@ import org.apache.commons.lang3.StringUtils
  */
 open class GoToDialog : DialogFragment() {
 
-    internal var dao = FurqanDao.get()
+    internal var dao = FurqanDao
 
     internal var bus = EventBus
 

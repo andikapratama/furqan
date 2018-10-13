@@ -37,8 +37,8 @@ import java.util.concurrent.Future
 
 open class SourcesFragment : ListFragment() {
 
-    internal var dao = FurqanDao.get()
-    internal var settings = FurqanSettings.get()
+    internal var dao = FurqanDao
+    internal var settings = FurqanSettings
     internal var service = TranslationsService
 
     internal var bus = EventBus

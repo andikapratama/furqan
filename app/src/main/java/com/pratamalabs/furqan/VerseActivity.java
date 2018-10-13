@@ -39,9 +39,9 @@ public class VerseActivity extends AppCompatActivity implements ActionBar.TabLis
     SectionsPagerAdapter mSectionsPagerAdapter;
     Surah mSurah;
 
-    FurqanDao dao = FurqanDao.get();
+    FurqanDao dao = FurqanDao.INSTANCE;
 
-    FurqanSettings settings = FurqanSettings.get();
+    FurqanSettings settings = FurqanSettings.INSTANCE;
 
     EventBus bus = EventBus.INSTANCE;
 

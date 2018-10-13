@@ -23,7 +23,7 @@ import java.util.*
  */
 object TranslationsService {
 
-    internal var dao = FurqanDao.get()
+    internal var dao = FurqanDao
 
     fun backupNotesToExternalDevice(): Boolean {
         val notes = dao.notes

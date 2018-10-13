@@ -28,9 +28,9 @@ import java.util.*
  */
 open class SurahFragment : ListFragment() {
 
-    internal var dao = FurqanDao.get()
+    internal var dao = FurqanDao
 
-    internal var settings = FurqanSettings.get()
+    internal var settings = FurqanSettings
 
 
     internal var bus = EventBus
@@ -73,8 +73,6 @@ open class SurahFragment : ListFragment() {
         })
     }
 
-
-    //    @Background
     internal open fun loadSurah() {
         async(UI) {
             bg {
@@ -85,7 +83,6 @@ open class SurahFragment : ListFragment() {
     }
 
 
-    //    @AfterViews
     internal fun init() {
         loadSurah()
         listView.onItemLongClickListener = AdapterView.OnItemLongClickListener { adapterView, view, n, l ->

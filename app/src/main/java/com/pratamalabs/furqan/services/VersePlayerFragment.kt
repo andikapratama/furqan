@@ -17,7 +17,7 @@ import java.io.IOException
 
 open class VersePlayerFragment : Fragment() {
 
-    internal var settings = FurqanSettings.get()
+    internal var settings = FurqanSettings
 
     internal var bus = EventBus
     internal var mediaPlayer: MediaPlayer? = null
