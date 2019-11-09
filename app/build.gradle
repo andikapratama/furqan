@@ -48,7 +48,6 @@ dependencies {
     implementation 'com.koushikdutta.ion:ion:2.+'
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    //    compile 'io.reactivex:rxandroid:0.22.0'
 }
 
 android {
